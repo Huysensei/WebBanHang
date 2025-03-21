@@ -94,5 +94,16 @@ namespace CosmeticsShop.Controllers
             ViewBag.Message = "Thêm thành công";
             return View("Details", cate);
         }
+        [HttpPost]
+        public ActionResult Delete(int id)
+        {
+            var customer = db.Categories.Find(id); // db là DbContext của bạn
+            if (customer != null)
+            {
+                db.Categories.Remove(customer);
+                db.SaveChanges();
+            }
+            return RedirectToAction("Index");
+        }
     }
 }

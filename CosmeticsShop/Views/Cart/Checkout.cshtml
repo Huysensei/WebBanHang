@@ -104,50 +104,59 @@
 <div class="breadcrumbs">
     <div class="container">
         <ol class="breadcrumb breadcrumb1 animated wow slideInLeft animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: slideInLeft;">
-            <li><a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Trang chủ</a></li>
-            <li class="active">Giỏ hàng</li>
+            <li><a style="color:black" href="/"><span style="color:black" class="glyphicon glyphicon-home" aria-hidden="true"></span>Trang chủ</a></li>
+            <li style="color:black" class="active">Giỏ hàng</li>
         </ol>
     </div>
 </div>
 <!---->
-<div class="container">
-    <div class="check-out">
-        <h2>Giỏ hàng</h2>
+<div class="container my-4">
+    <div class="check-out card shadow-sm p-4">
+        <h2 style="color:black" class="text-center text-primary">Giỏ hàng</h2>
         @if (itemCarts != null && itemCarts.Count > 0)
         {
-            <table border="1">
-                <tr>
-                    <th>Sản phẩm</th>
-                    <th>Tên sản phẩm</th>
-                    <th>Số lượng</th>
-                    <th>Đơn giá</th>
-                    <th>Thành tiền</th>
-                </tr>
-                @foreach (var item in itemCarts)
-                {
-                    <tr>
-                        <td class="ring-in">
-                            <a href="/Product/Details/@item.ProductID" class="at-in"><img src="~/Content/images/@item.ProductImage" class="img-responsive" alt=""></a>
-                            
-                            <div class="clearfix"> </div>
-                        </td>
-                        <td>
-                            <div class="sed">
-                                <h5>@item.ProductName</h5>
-                            </div>
-                        </td>
-                        <td class="check"><input type="number" class="qty" data-id="@item.ProductID" value="@item.Quantity" style="width:100px; text-align:center" min="0"></td>
-                        <td>@item.ProductPrice.ToString("#,##")₫</td>
-                        <td id="@item.ProductID">@((item.ProductPrice * item.Quantity).ToString("#,##"))₫</td>
-                        <td>
-                            <button class="btn btn-danger remove-item" data-id="@item.ProductID">Xóa</button>
-                        </td>
+            <table class="table table-bordered table-hover mt-4">
+                <thead class="bg-primary text-white">
+                    <tr class="text-center">
+                        <th>Sản phẩm</th>
+                        <th>Tên</th>
+                        <th>Số lượng</th>
+                        <th>Đơn giá</th>
+                        <th>Thành tiền</th>
+                        <th>Thao tác</th>
                     </tr>
-                }
-                <tr>
-                    <th class="total-cart">Tổng: @itemCarts.Sum(x => x.Quantity * x.ProductPrice).ToString("#,##")₫</th>
-                </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in itemCarts)
+                    {
+                        <tr class="align-middle">
+                            <td class="text-center">
+                                <a href="/Product/Details/@item.ProductID">
+                                    <img src="~/Content/images/@item.ProductImage" class="img-thumbnail" style="width:80px; height:80px;" />
+                                </a>
+                            </td>
+                            <td class="fw-bold text-center">@item.ProductName</td>
+                            <td class="text-center">
+                                <input type="number" class="form-control qty text-center" data-id="@item.ProductID" value="@item.Quantity" min="1" style="width: 80px;">
+                            </td>
+                            <td class="text-center text-danger">@item.ProductPrice.ToString("#,##")₫</td>
+                            <td class="text-center text-success fw-bold" id="@item.ProductID">
+                                @((item.ProductPrice * item.Quantity).ToString("#,##"))₫
+                            </td>
+                            <td class="text-center">
+                                <button class="btn btn-sm btn-danger remove-item" data-id="@item.ProductID">
+                                    <i class="fa fa-trash"></i> Xóa
+                                </button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
             </table>
+            <div class="d-flex justify-content-between align-items-center mt-4">
+                <h4 class="text-primary">Tổng tiền: <span class="fw-bold text-danger total-cart">@itemCarts.Sum(x => x.Quantity * x.ProductPrice).ToString("#,##")₫</span></h4>
+            </div>
+
+            <hr />
             if (Session["User"] == null)
             {
                 <a href="/Home/SignIn" class=" to-buy">ĐĂNG NHẬP ĐỂ ĐẶT HÀNG</a>
@@ -155,7 +164,7 @@
             else
             {
                 <p>Phương thức thanh toán:</p>
-                <br/>
+                <br />
                 <form action="/Cart/AddOrder" method="post">
                     <select name="payment">
                         <option value="cod">Thanh toán sau khi giao</option>
@@ -169,9 +178,11 @@
         }
         else
         {
-            <h3> Giỏ hàng hiện đang rỗng</h3>
-            <div class="clearfix">
-            </div>
+            <div style="height:190px" class="text-center">
+            <h3 class="text-muted">Giỏ hàng hiện đang rỗng</h3>
+            <br />
+            <a href="/Product/Index" class="btn btn-primary mt-3">Tiếp tục mua sắm</a>
+    </div>
         }
     </div>
 </div>

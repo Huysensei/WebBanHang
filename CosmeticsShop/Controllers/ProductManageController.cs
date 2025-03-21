@@ -170,5 +170,7 @@ namespace CosmeticsShop.Controllers
             ViewBag.Message = "Thêm thành công";
             return View("Details", product);
         }
+        
+
     }
 }

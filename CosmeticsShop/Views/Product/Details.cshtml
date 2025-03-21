@@ -40,8 +40,8 @@
 <div class="breadcrumbs">
     <div class="container">
         <ol class="breadcrumb breadcrumb1 animated wow slideInLeft animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: slideInLeft;">
-            <li><a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Trang chủ</a></li>
-            <li class="active">Sản phẩm</li>
+            <li><a style="color:black" href="/"><span style="color:black" class="glyphicon glyphicon-home" aria-hidden="true"></span>Trang chủ</a></li>
+            <li><a style="color:black" href="/">Sản phẩm</a></li>
             <li class="active">@Model.Name</li>
         </ol>
     </div>
@@ -72,24 +72,29 @@
             </div>
             <div class="col-md-7 single-top-in">
                 <div class="single-para simpleCart_shelfItem">
-                    <h2>@Model.Name</h2>
-                    <p> @Model.Description</p>
+                    <h2 style="color:black">@Model.Name</h2>
                     <div class="star-on">
-                        @*<ul>
-                                <li><a href="#"><i class="glyphicon glyphicon-star"> </i></a></li>
-                                <li><a href="#"><i class="glyphicon glyphicon-star"> </i></a></li>
-                                <li><a href="#"><i class="glyphicon glyphicon-star"> </i></a></li>
-                                <li><a href="#"><i class="glyphicon glyphicon-star"> </i></a></li>
-                                <li><a href="#"><i class="glyphicon glyphicon-star"> </i></a></li>
-                            </ul>
-                            <div class="review">
-                                <a href="#"> 3 reviews </a>/
-                                <a href="#">  Write a review</a>
-                            </div>*@
+                        <ul>
+                            <li><a href="#"><i class="glyphicon glyphicon-star"> </i></a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-star"> </i></a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-star"> </i></a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-star"> </i></a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-star"> </i></a></li>
+                        </ul>
+                        <div class="review">
+                            <a href="#"> 3 reviews </a>/
+                            <a href="#">  Write a review</a>
+                        </div>
+
                         <div class="clearfix"> </div>
                     </div>
-                    <label class="add-to item_price">@Model.Price.Value.ToString("#,##")₫</label>
-                    <a href="#" class="cart item_add" data-id="@Model.ID">Chọn mua</a>
+                    <p class="item_price">Đã bán: @Model.PurchasedCount</p>
+                    <hr />
+                    <label style="color:black" class="add-to item_price">@Model.Price.Value.ToString("#,##")₫</label>
+                    <hr />
+                    <p class="description">@Html.Raw(Model.Description.Replace("\n", "<br>"))</p>
+
+                    <a style="background-color:orangered" href="#" class="cart item_add" data-id="@Model.ID">Thêm vào giỏ hàng</a>
                 </div>
             </div>
             <div class="clearfix"> </div>

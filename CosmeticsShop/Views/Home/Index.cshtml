@@ -69,7 +69,7 @@
 <!--//banner-->
 <div class="products">
     <div class="container">
-        <h3 style="text-align:center"> <b>Sản phẩm</b></h3>
+        <h3 style="text-align:center; color:black;"> <b>SẢN PHẨM NỔI BẬT</b></h3>
         <div class="col-md-12">
             @if (products.Count > 0)
             {
@@ -80,10 +80,14 @@
                             <a href="/Product/Details/@products[i].ID">
                                 <img class="img-responsive" src="~/Content/images/@products[i].Image1" alt="" style="height:250px;width:200px" />
                             </a>
-                            <h3><a href="/Product/Details/@products[i].ID">@products[i].Name</a></h3>
+                            <h3>
+                                <a href="/Product/Details/@products[i].ID" style="color:black; text-decoration:none;">
+                                    @products[i].Name
+                                </a>
+                            </h3>
                             <div class="price">
-                                <h5 class="item_price">@products[i].Price.Value.ToString("#,##")₫</h5>
-                                <p class="item_price">Đã bán: @products[i].PurchasedCount (Còn lại @products[i].Quantity)</p>
+                                <h5 class="item_price" style="color:black;">@products[i].Price.Value.ToString("#,##")₫</h5>
+                                <p class="item_price" style="color:black;">Đã bán: @products[i].PurchasedCount</p>
                             </div>
                         </div>
                     </div>
@@ -91,7 +95,7 @@
             }
             else
             {
-                <h3>Không có sản phẩm nào...</h3>
+                <h3 style="color:black;">Không có sản phẩm nào...</h3>
             }
         </div>
     </div>

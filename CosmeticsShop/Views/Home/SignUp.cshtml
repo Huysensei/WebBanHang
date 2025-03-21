@@ -6,14 +6,14 @@
 <div class="breadcrumbs">
     <div class="container">
         <ol class="breadcrumb breadcrumb1 animated wow slideInLeft animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: slideInLeft;">
-            <li><a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Trang chủ</a></li>
+            <li><a style="color:black" href="/"><span style="color:black" class="glyphicon glyphicon-home" aria-hidden="true"></span>Trang chủ</a></li>
             <li class="active">Đăng ký</li>
         </ol>
     </div>
 </div>
 <div class="container">
     <div class="register">
-        <h2>Đăng ký</h2>
+        <h3 style="color:black; text-align:center"><b>Đăng ký</b></h3>
         @using (Html.BeginForm("SignUp", "Home", FormMethod.Post))
         {
             <div class="col-md-6  register-top-grid">
@@ -27,12 +27,11 @@
 
                     <span>Số điện thoại</span>
                     <input type="text" name="Phone" required>
-                </div>
-                <div class=" col-md-6 register-bottom-grid">
-                    <div class="mation">
-                        <input type="submit" value="Đăng ký" class="btn btn-default">
+                    <div class="work-in">
+                        <input style="background-color:orangered;color:white; width:110px" type="submit" value="Đăng ký" class="btn btn-default">
                     </div>
                 </div>
+
                 <div class="clearfix"> </div>
             </div>
             <div class=" col-md-6 register-bottom-grid">

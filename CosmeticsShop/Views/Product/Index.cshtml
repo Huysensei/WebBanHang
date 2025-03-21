@@ -6,6 +6,50 @@
     List<CosmeticsShop.Models.Category> categories = ViewBag.ListCategory as List<CosmeticsShop.Models.Category>;
     List<CosmeticsShop.Models.Product> products = ViewBag.ListProduct as List<CosmeticsShop.Models.Product>;
 }
+
+
+<style>
+    .category-title {
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #222;
+        margin-bottom: 15px;
+        padding-bottom: 8px;
+        border-bottom: 2px solid #007bff;
+    }
+
+    .category-menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+        .category-menu li {
+            padding: 10px;
+            background: #f4f4f4;
+            margin-bottom: 5px;
+            border-radius: 5px;
+            transition: all 0.3s ease-in-out;
+        }
+
+            .category-menu li a {
+                text-decoration: none;
+                color: #333;
+                font-size: 16px;
+                font-weight: 500;
+                display: block;
+            }
+
+            .category-menu li:hover {
+                background: #007bff;
+            }
+
+                .category-menu li:hover a {
+                    color: white;
+                }
+</style>
+
 <script>
     $(document).ready(function () {
         $(".item_add").on('click', function () {
@@ -38,14 +82,16 @@
         })
     });
 </script>
+
 <div class="breadcrumbs">
     <div class="container">
         <ol class="breadcrumb breadcrumb1 animated wow slideInLeft animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: slideInLeft;">
-            <li><a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Trang chủ</a></li>
+            <li><a style="color:black" href="/"><span style="color: black;" class="glyphicon glyphicon-home" aria-hidden="true"></span>Trang chủ</a></li>
             <li class="active">Sản phẩm</li>
         </ol>
     </div>
 </div>
+
 <!--content-->
 <div class="products">
     <div class="container">
@@ -53,17 +99,18 @@
         <div class="col-md-12">
             <div class="col-md-3 product-bottom">
                 <!--categories-->
-                <div class=" rsidebar span_1_of_left">
-                    <h3>Danh mục</h3>
-                    <ul class="menu-drop">
+                <div class="rsidebar span_1_of_left">
+                    <h3 class="category-title">Danh mục</h3>
+                    <ul class="category-menu">
                         @foreach (var item in categories)
                         {
-                            <li class="item1">
-                                <a href="/Product/Index?CategoryID=@item.ID"><b>@item.Name</b></a>
+                            <li>
+                                <a href="/Product/Index?CategoryID=@item.ID">@item.Name</a>
                             </li>
                         }
                     </ul>
                 </div>
+
             </div>
             <div class="col-md-9">
                 <h4>@ViewBag.NamePage</h4>
@@ -73,13 +120,13 @@
                     {
                         <div class="col-md-4" style="margin-top:25px">
                             <div class="col-md1 simpleCart_shelfItem">
-                                <a href="/Product/Details/@products[i].ID">
+                                <a  href="/Product/Details/@products[i].ID">
                                     <img class="img-responsive" src="~/Content/images/@products[i].Image1" alt="" style="height:250px;width:200px" />
                                 </a>
-                                <h3><a href="/Product/Details/@products[i].ID">@products[i].Name</a></h3>
+                                <h3 ><a style="color:black" href="/Product/Details/@products[i].ID">@products[i].Name</a></h3>
                                 <div class="price">
                                     <h5 class="item_price">@products[i].Price.Value.ToString("#,##")₫</h5>
-                                    <p class="item_price">Đã bán: @products[i].PurchasedCount (Còn lại @products[i].Quantity)</p>
+                                    <p class="item_price">Đã bán: @products[i].PurchasedCount</p>
                                 </div>
                             </div>
                         </div>

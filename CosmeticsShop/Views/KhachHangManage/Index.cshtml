@@ -62,7 +62,10 @@
                                     <td>@item.Name</td>
                                     <td>@item.Email</td>
                                     <td>
-                                        <button class="btn btn-primary" onclick="location.href='/CategoryManage/Details/@item.ID'">Chi tiết/Sửa</button>
+                                        <form action="@Url.Action("Delete", "KhachHangManage")" method="post" style="display:inline;">
+                                            <input type="hidden" name="id" value="@item.ID" />
+                                            <button type="submit" class="btn btn-danger" onclick="return confirm('Bạn có chắc chắn muốn xóa?')">Xóa</button>
+                                        </form>
                                     </td>
                                 </tr>
                             }

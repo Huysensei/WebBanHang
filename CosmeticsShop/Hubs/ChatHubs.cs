@@ -28,19 +28,25 @@ namespace CosmeticsShop.Hubs
 
         private void TableDependency_OnError(object sender, ErrorEventArgs e)
         {
-            throw new NotImplementedException();
+            System.Diagnostics.Debug.WriteLine($"Lỗi SQL Dependency: {e.Error.Message}");
         }
 
         public static void Show()
         {
             IHubContext context = GlobalHost.ConnectionManager.GetHubContext<ChatHubs>();
-            context.Clients.All.displayMessage();
+            if (context != null)
+            {
+                context.Clients.All.displayMessage();
+            }
         }
 
         public static void ShowMessage()
         {
             IHubContext context = GlobalHost.ConnectionManager.GetHubContext<ChatHubs>();
-            context.Clients.All.displayMessageChating();
+            if (context != null)
+            {
+                context.Clients.All.displayMessageChating();
+            }
         }
     }
 }

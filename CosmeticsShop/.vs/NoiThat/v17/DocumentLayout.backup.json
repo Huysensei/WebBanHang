@@ -3,100 +3,68 @@
   "WorkspaceRootPath": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\controllers\\khachhangmanagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:controllers\\khachhangmanagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|c:\\users\\pnh55\\documents\\datn\\cosmeticsshop\\cosmeticsshop\\views\\cart\\message.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:views\\cart\\message.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\views\\cart\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:views\\cart\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\views\\shared\\_productlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:views\\shared\\_productlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|c:\\users\\pnh55\\documents\\datn\\cosmeticsshop\\cosmeticsshop\\views\\shared\\_homelayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:views\\shared\\_homelayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|c:\\users\\pnh55\\documents\\datn\\cosmeticsshop\\cosmeticsshop\\hubs\\chathubs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\hubs\\chathubs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:hubs\\chathubs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\views\\home\\signin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:views\\home\\signin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\views\\productmanage\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:views\\productmanage\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\views\\product\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:views\\product\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\views\\khachhangmanage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:views\\khachhangmanage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\views\\productmanage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:views\\productmanage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\controllers\\categorymanagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:controllers\\categorymanagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\controllers\\productmanagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:controllers\\productmanagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\views\\productmanage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:views\\productmanage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\views\\productmanage\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:views\\productmanage\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|c:\\users\\pnh55\\documents\\datn\\cosmeticsshop\\cosmeticsshop\\views\\cart\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:views\\cart\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\views\\statistic\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:views\\statistic\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\views\\categorymanage\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:views\\categorymanage\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\views\\cart\\message.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:views\\cart\\message.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\views\\product\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:views\\product\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\controllers\\categorymanagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:controllers\\categorymanagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\views\\productmanage\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:views\\productmanage\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\views\\home\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:views\\home\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\views\\categorymanage\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:views\\categorymanage\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\views\\categorymanage\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -107,8 +75,72 @@
       "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:controllers\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\controllers\\khachhangmanagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:controllers\\khachhangmanagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\views\\payment\\returnurl.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:views\\payment\\returnurl.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\views\\shared\\_productlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:views\\shared\\_productlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\views\\shared\\_homelayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:views\\shared\\_homelayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\views\\khachhangmanage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:views\\khachhangmanage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\views\\home\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:views\\home\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\views\\admin\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:views\\admin\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\views\\chat\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:views\\chat\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\views\\categorymanage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:views\\categorymanage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\views\\chat\\chating.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:views\\chat\\chating.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\views\\home\\signin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B5676775-5878-4B9A-A3F9-78CA2E11378E}|NoiThat.csproj|solutionrelative:views\\home\\signin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -118,316 +150,49 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "_HomeLayout.cshtml",
-              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Shared\\_HomeLayout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_HomeLayout.cshtml",
-              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Shared\\_HomeLayout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_HomeLayout.cshtml",
-              "ViewState": "AgIAAI8BAAAAAAAAAAAmwLMAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-18T05:14:25.435Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAAAHoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-18T04:34:52.105Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "_AdminLayout.cshtml",
-              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Shared\\_AdminLayout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_AdminLayout.cshtml",
-              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Shared\\_AdminLayout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_AdminLayout.cshtml",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-18T05:14:24.643Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "_ProductLayout.cshtml",
-              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Shared\\_ProductLayout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_ProductLayout.cshtml",
-              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Shared\\_ProductLayout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_ProductLayout.cshtml",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-18T05:42:00.598Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Error.cshtml",
-              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Shared\\Error.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\Error.cshtml",
-              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Shared\\Error.cshtml",
-              "RelativeToolTip": "Views\\Shared\\Error.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-18T05:41:59.799Z",
+              "DocumentIndex": 2,
+              "Title": "ProductManageController.cs",
+              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Controllers\\ProductManageController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductManageController.cs",
+              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Controllers\\ProductManageController.cs",
+              "RelativeToolTip": "Controllers\\ProductManageController.cs",
+              "ViewState": "AgIAAJsAAAAAAAAAAAAiwKwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T05:09:51.546Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Controllers\\UserController.cs",
-              "RelativeToolTip": "Controllers\\UserController.cs",
-              "ViewState": "AgIAAIYAAAAAAAAAAAAUwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T05:09:57.058Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
-              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "Controllers\\AdminController.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAcwDkAAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T05:10:02.243Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Message.cshtml",
-              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Cart\\Message.cshtml",
-              "RelativeDocumentMoniker": "Views\\Cart\\Message.cshtml",
-              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Cart\\Message.cshtml",
-              "RelativeToolTip": "Views\\Cart\\Message.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-18T12:14:55.558Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
               "Title": "ChatHubs.cs",
               "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Hubs\\ChatHubs.cs",
               "RelativeDocumentMoniker": "Hubs\\ChatHubs.cs",
               "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Hubs\\ChatHubs.cs",
               "RelativeToolTip": "Hubs\\ChatHubs.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABMAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAqwBMAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-18T10:37:03.497Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "SignIn.cshtml",
-              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Home\\SignIn.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\SignIn.cshtml",
-              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Home\\SignIn.cshtml",
-              "RelativeToolTip": "Views\\Home\\SignIn.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "Message.cshtml",
+              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Cart\\Message.cshtml",
+              "RelativeDocumentMoniker": "Views\\Cart\\Message.cshtml",
+              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Cart\\Message.cshtml",
+              "RelativeToolTip": "Views\\Cart\\Message.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-18T05:14:03.216Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-18T12:14:55.558Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Checkout.cshtml",
-              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Cart\\Checkout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Cart\\Checkout.cshtml",
-              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Cart\\Checkout.cshtml",
-              "RelativeToolTip": "Views\\Cart\\Checkout.cshtml",
-              "ViewState": "AgIAAH4AAAAAAAAAAAAAAJ0AAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-18T07:32:44.715Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Add.cshtml",
-              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\ProductManage\\Add.cshtml",
-              "RelativeDocumentMoniker": "Views\\ProductManage\\Add.cshtml",
-              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\ProductManage\\Add.cshtml",
-              "RelativeToolTip": "Views\\ProductManage\\Add.cshtml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-18T07:08:29.374Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Product\\Details.cshtml",
-              "RelativeDocumentMoniker": "Views\\Product\\Details.cshtml",
-              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Product\\Details.cshtml",
-              "RelativeToolTip": "Views\\Product\\Details.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-18T07:08:13.405Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\KhachHangManage\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\KhachHangManage\\Index.cshtml",
-              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\KhachHangManage\\Index.cshtml",
-              "RelativeToolTip": "Views\\KhachHangManage\\Index.cshtml",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAmwDMAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-18T04:28:06.551Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\ProductManage\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\ProductManage\\Index.cshtml",
-              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\ProductManage\\Index.cshtml",
-              "RelativeToolTip": "Views\\ProductManage\\Index.cshtml",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAABUAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-18T07:51:53.532Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Product\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Product\\Index.cshtml",
-              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Product\\Index.cshtml",
-              "RelativeToolTip": "Views\\Product\\Index.cshtml",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAowGIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-18T07:08:14.294Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "CategoryManageController.cs",
-              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Controllers\\CategoryManageController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CategoryManageController.cs",
-              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Controllers\\CategoryManageController.cs",
-              "RelativeToolTip": "Controllers\\CategoryManageController.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwBgAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T05:16:44.164Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "ProductManageController.cs",
-              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Controllers\\ProductManageController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ProductManageController.cs",
-              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Controllers\\ProductManageController.cs",
-              "RelativeToolTip": "Controllers\\ProductManageController.cs",
-              "ViewState": "AgIAAIUAAAAAAAAAAADwvy0AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T05:09:51.546Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "ProductController.cs",
-              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Controllers\\ProductController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ProductController.cs",
-              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Controllers\\ProductController.cs",
-              "RelativeToolTip": "Controllers\\ProductController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T08:23:39.115Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEMAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T05:16:47.651Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\ProductManage\\Details.cshtml",
-              "RelativeDocumentMoniker": "Views\\ProductManage\\Details.cshtml",
-              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\ProductManage\\Details.cshtml",
-              "RelativeToolTip": "Views\\ProductManage\\Details.cshtml",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-18T05:02:16.754Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "SignUp.cshtml",
-              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Home\\SignUp.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\SignUp.cshtml",
-              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Home\\SignUp.cshtml",
-              "RelativeToolTip": "Views\\Home\\SignUp.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-18T05:05:29.875Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "CartController.cs",
-              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Controllers\\CartController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CartController.cs",
-              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Controllers\\CartController.cs",
-              "RelativeToolTip": "Controllers\\CartController.cs",
-              "ViewState": "AgIAAKIAAAAAAAAAAAAswLsAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T05:10:02.938Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\CategoryManage\\Details.cshtml",
-              "RelativeDocumentMoniker": "Views\\CategoryManage\\Details.cshtml",
-              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\CategoryManage\\Details.cshtml",
-              "RelativeToolTip": "Views\\CategoryManage\\Details.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-18T04:31:44.496Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 7,
               "Title": "Add.cshtml",
               "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\CategoryManage\\Add.cshtml",
               "RelativeDocumentMoniker": "Views\\CategoryManage\\Add.cshtml",
@@ -439,27 +204,379 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "ChatController.cs",
-              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Controllers\\ChatController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ChatController.cs",
-              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Controllers\\ChatController.cs",
-              "RelativeToolTip": "Controllers\\ChatController.cs",
-              "ViewState": "AgIAALYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T05:10:06.203Z"
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Statistic\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Statistic\\Index.cshtml",
+              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Statistic\\Index.cshtml",
+              "RelativeToolTip": "Views\\Statistic\\Index.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-19T06:14:00.771Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 4,
+              "Title": "Add.cshtml",
+              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\ProductManage\\Add.cshtml",
+              "RelativeDocumentMoniker": "Views\\ProductManage\\Add.cshtml",
+              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\ProductManage\\Add.cshtml",
+              "RelativeToolTip": "Views\\ProductManage\\Add.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAE4AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-18T07:08:29.374Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\ProductManage\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\ProductManage\\Index.cshtml",
+              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\ProductManage\\Index.cshtml",
+              "RelativeToolTip": "Views\\ProductManage\\Index.cshtml",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAswFkAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-18T07:51:53.532Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "KhachHangManageController.cs",
               "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Controllers\\KhachHangManageController.cs",
               "RelativeDocumentMoniker": "Controllers\\KhachHangManageController.cs",
               "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Controllers\\KhachHangManageController.cs",
               "RelativeToolTip": "Controllers\\KhachHangManageController.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T04:27:58.158Z"
+              "WhenOpened": "2025-03-18T04:27:58.158Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Checkout.cshtml",
+              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Cart\\Checkout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Cart\\Checkout.cshtml",
+              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Cart\\Checkout.cshtml",
+              "RelativeToolTip": "Views\\Cart\\Checkout.cshtml",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAAAI4AAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-18T07:32:44.715Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Product\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Product\\Details.cshtml",
+              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Product\\Details.cshtml",
+              "RelativeToolTip": "Views\\Product\\Details.cshtml",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAswGAAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-18T07:08:13.405Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "Controllers\\ProductController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAswCEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T08:23:39.115Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAA7wEMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T05:16:47.651Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CategoryManageController.cs",
+              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Controllers\\CategoryManageController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CategoryManageController.cs",
+              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Controllers\\CategoryManageController.cs",
+              "RelativeToolTip": "Controllers\\CategoryManageController.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAuwGgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T05:16:44.164Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Product\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Product\\Index.cshtml",
+              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Product\\Index.cshtml",
+              "RelativeToolTip": "Views\\Product\\Index.cshtml",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAAAHMAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-18T07:08:14.294Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\ProductManage\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\ProductManage\\Details.cshtml",
+              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\ProductManage\\Details.cshtml",
+              "RelativeToolTip": "Views\\ProductManage\\Details.cshtml",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-18T05:02:16.754Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\CategoryManage\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\CategoryManage\\Details.cshtml",
+              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\CategoryManage\\Details.cshtml",
+              "RelativeToolTip": "Views\\CategoryManage\\Details.cshtml",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAwDMAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-18T04:31:44.496Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ChatController.cs",
+              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Controllers\\ChatController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ChatController.cs",
+              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Controllers\\ChatController.cs",
+              "RelativeToolTip": "Controllers\\ChatController.cs",
+              "ViewState": "AgIAAHsAAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T05:10:06.203Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CartController.cs",
+              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Controllers\\CartController.cs",
+              "RelativeToolTip": "Controllers\\CartController.cs",
+              "ViewState": "AgIAAIIAAAAAAAAAAAAYwJ4AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T05:10:02.938Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "PaymentController.cs",
+              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Controllers\\PaymentController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PaymentController.cs",
+              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Controllers\\PaymentController.cs",
+              "RelativeToolTip": "Controllers\\PaymentController.cs",
+              "ViewState": "AgIAABIBAAAAAAAAAAAcwDIBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T03:33:31.992Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ReturnUrl.cshtml",
+              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Payment\\ReturnUrl.cshtml",
+              "RelativeDocumentMoniker": "Views\\Payment\\ReturnUrl.cshtml",
+              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Payment\\ReturnUrl.cshtml",
+              "RelativeToolTip": "Views\\Payment\\ReturnUrl.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-20T03:34:40.269Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "_HomeLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Shared\\_HomeLayout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_HomeLayout.cshtml",
+              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Shared\\_HomeLayout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_HomeLayout.cshtml",
+              "ViewState": "AgIAAPMAAAAAAAAAAAAgwLQAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-18T05:14:25.435Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Controllers\\AdminController.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAkwAQAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T05:10:02.243Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAUwF8AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-18T04:34:52.105Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "_ProductLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Shared\\_ProductLayout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_ProductLayout.cshtml",
+              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Shared\\_ProductLayout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_ProductLayout.cshtml",
+              "ViewState": "AgIAAHoAAAAAAAAAAAAkwF8AAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-18T05:42:00.598Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\KhachHangManage\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\KhachHangManage\\Index.cshtml",
+              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\KhachHangManage\\Index.cshtml",
+              "RelativeToolTip": "Views\\KhachHangManage\\Index.cshtml",
+              "ViewState": "AgIAACYAAAAAAAAAAAAowEEAAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-18T04:28:06.551Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "SignUp.cshtml",
+              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Home\\SignUp.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\SignUp.cshtml",
+              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Home\\SignUp.cshtml",
+              "RelativeToolTip": "Views\\Home\\SignUp.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-18T05:05:29.875Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Admin\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\Index.cshtml",
+              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Admin\\Index.cshtml",
+              "RelativeToolTip": "Views\\Admin\\Index.cshtml",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-19T06:14:28.328Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "LogIn.cshtml",
+              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Admin\\LogIn.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\LogIn.cshtml",
+              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Admin\\LogIn.cshtml",
+              "RelativeToolTip": "Views\\Admin\\LogIn.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-19T06:14:29.27Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Chat\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Chat\\Index.cshtml",
+              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Chat\\Index.cshtml",
+              "RelativeToolTip": "Views\\Chat\\Index.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAUwEYAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-19T05:43:34.474Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\CategoryManage\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\CategoryManage\\Index.cshtml",
+              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\CategoryManage\\Index.cshtml",
+              "RelativeToolTip": "Views\\CategoryManage\\Index.cshtml",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAE8AAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-19T06:02:27.504Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Chating.cshtml",
+              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Chat\\Chating.cshtml",
+              "RelativeDocumentMoniker": "Views\\Chat\\Chating.cshtml",
+              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Chat\\Chating.cshtml",
+              "RelativeToolTip": "Views\\Chat\\Chating.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-19T05:43:33.649Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Controllers\\UserController.cs",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T05:09:57.058Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Shared\\Error.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\Error.cshtml",
+              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Shared\\Error.cshtml",
+              "RelativeToolTip": "Views\\Shared\\Error.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-18T05:41:59.799Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "_AdminLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_AdminLayout.cshtml",
+              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_AdminLayout.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-18T05:14:24.643Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "SignIn.cshtml",
+              "DocumentMoniker": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Home\\SignIn.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\SignIn.cshtml",
+              "ToolTip": "C:\\Users\\pnh55\\Documents\\DATN\\CosmeticsShop\\CosmeticsShop\\Views\\Home\\SignIn.cshtml",
+              "RelativeToolTip": "Views\\Home\\SignIn.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-18T05:14:03.216Z"
             }
           ]
         }

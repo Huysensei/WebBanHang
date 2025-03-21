@@ -31,12 +31,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         new WOW().init();
     </script>
     <style>
+        .header-top{
+            padding: 0px
+        }
         .header-top .container {
             display: flex;
             align-items: center; /* Căn giữa theo chiều dọc */
             justify-content: space-between; /* Các phần tử dàn đều */
             flex-wrap: wrap; /* Cho phép xuống dòng nếu không đủ không gian */
-            padding: 10px 0; /* Cách lề trên dưới */
         }
 
         .logo img {
@@ -57,6 +59,89 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             margin-left: 15px; /* Khoảng cách giữa giỏ hàng và user */
         }
 
+        .footer {
+            background-color: #222;
+            color: #fff;
+            padding: 40px 0;
+            font-size: 14px;
+        }
+
+        /* Sử dụng Flexbox để tạo 3 cột ngang */
+        .footer-container {
+            display: flex;
+            justify-content: space-between; /* Chia đều khoảng cách */
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: auto;
+            flex-wrap: wrap;
+        }
+
+        /* Cấu trúc từng cột */
+        .footer-column {
+            width: 30%; /* Mỗi cột chiếm 30% */
+            min-width: 250px;
+            padding: 0 15px;
+        }
+
+            .footer-column h4 {
+                font-size: 18px;
+                margin-bottom: 15px;
+                border-bottom: 2px solid #f1c40f;
+                padding-bottom: 5px;
+            }
+
+            .footer-column p, .footer-links {
+                color: #ccc;
+            }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+
+            .footer-links li {
+                margin-bottom: 8px;
+            }
+
+            .footer-links a {
+                color: #ddd;
+                text-decoration: none;
+                transition: 0.3s;
+            }
+
+                .footer-links a:hover {
+                    color: #f1c40f;
+                }
+
+        /* Style mạng xã hội */
+        .social-icons {
+            margin-top: 10px;
+        }
+
+            .social-icons a {
+                display: inline-block;
+                margin-right: 10px;
+                font-size: 20px;
+                color: #fff;
+                transition: 0.3s;
+            }
+
+                .social-icons a:hover {
+                    color: #f1c40f;
+                }
+
+        /* Dòng bản quyền */
+        .footer-bottom {
+            text-align: center;
+            padding: 15px 0;
+            background-color: #111;
+   
+        }
+
+            .footer-bottom a {
+                color: #f1c40f;
+                text-decoration: none;
+            }
     </style>
     <!-- //animation-effect -->
 </head>
@@ -85,6 +170,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 </div>
 
 
+                <!-- Giỏ hàng -->
+                <div class="world animated wow fadeInRight" data-wow-delay=".5s">
+                    <div class="cart box_1">
+                        <a href="/Cart/Checkout">
+
+                            <img style="height:30px" src="~/Content/images/cart.png" alt="" />
+                        </a>
+                    </div>
+                    <a href="/Cart/Checkout" style="color:black">&nbsp Giỏ hàng &nbsp</a>
+                </div>
 
                 <!-- Thông tin user -->
                 @{
@@ -98,14 +193,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     }
                 }
 
-                <!-- Giỏ hàng -->
-                <div class="world animated wow fadeInRight" data-wow-delay=".5s">
-                    <div class="cart box_1">
-                        <a href="/Cart/Checkout">
-                            <img style="height:30px" src="~/Content/images/cart.png" alt="" />
-                        </a>
-                    </div>
-                </div>
             </div>
         </div>
 
@@ -226,60 +313,49 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             }
         </div>
     </div>
-    <!--footer-->
-    <div class="footer" style="background-color:#cacaca">
-        <div style="padding-bottom:20px" class="container">
-            <div class="footer-top">
-                <div class="col-md-4 top-footer">
-                    <h4>NỘI THẤT HOMAROOM</h4>
-                    <br />
 
-                    <p style="text-align:justify">
-                        Nội Thất HOMAROOM là thương hiệu đến từ Savimex với gần 40 năm kinh nghiệm trong việc sản xuất và xuất khẩu
-                        nội thất đạt chuẩn quốc tế.
-                    </p>
-                </div>
-                <div class="col-md-4 top-footer">
-                    <h4> DỊCH VỤ </h4>
-                    <br />
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-container">
+            <!-- Cột 1: Giới thiệu -->
+            <div class="footer-column">
+                <h4>NỘI THẤT HOMAROOM</h4>
+                <p>Nội Thất HOMAROOM là thương hiệu đến từ Savimex với gần 40 năm kinh nghiệm trong việc sản xuất và xuất khẩu nội thất đạt chuẩn quốc tế.</p>
+            </div>
 
-                    <p>Chính Sách Bán Hàng</p>
+            <!-- Cột 2: Dịch vụ -->
+            <div class="footer-column">
+                <h4>DỊCH VỤ</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Chính Sách Bán Hàng</a></li>
+                    <li><a href="#">Chính Sách Giao Hàng & Lắp Đặt</a></li>
+                    <li><a href="#">Chính Sách Bảo Hành & Bảo Trì</a></li>
+                    <li><a href="#">Chính Sách Đổi Trả</a></li>
+                    <li><a href="#">Chính Sách Đối Tác Bán Hàng</a></li>
+                    <li><a href="#">Khách Hàng Thân Thiết – MOHOmie</a></li>
+                </ul>
+            </div>
 
-                    <p>Chính Sách Giao Hàng & Lắp Đặt</p>
-
-                    <p>Chính Sách Bảo Hành & Bảo Trì</p>
-
-                    <p>Chính Sách Đổi Trả</p>
-
-                    <p>Chính Sách Đối Tác Bán Hàng</p>
-
-                    <p>Khách Hàng Thân Thiết – MOHOmie</p>
-                </div>
-                <div class="col-md-4 top-footer">
-                    <h4> THÔNG TIN LIÊN HỆ </h4>
-                    <br />
-                    <h4>Phone : +84234432555</h4>
-                    <br />
-                    <h4>Email : noithat@gmail.com</h4>
-                    <br />
-                    <h4>Địa chỉ : Hà Nội</h4>
-                    <br />
-                    <div class="social-icons">
-                        <ul class="social">
-                            <li><a href="#"><i class="facebook"></i></a></li>
-                            <li><a href="#"><i class="fa-youtube"></i></a></li>
-                            <li><a href="#"><i class="google"></i> </a></li>
-                        </ul>
-                        <br />
-                        <h4> Chất lượng - sang trọng</h4>
-                    </div>
+            <!-- Cột 3: Liên hệ -->
+            <div class="footer-column">
+                <h4>THÔNG TIN LIÊN HỆ</h4>
+                <p><strong>Phone:</strong> +84 234 432 555</p>
+                <p><strong>Email:</strong> noithat@gmail.com</p>
+                <p><strong>Địa chỉ:</strong> Hà Nội</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-youtube"></i></a>
+                    <a href="#"><i class="fa fa-google"></i></a>
                 </div>
             </div>
         </div>
     </div>
-        <div style="text-align:center">
-            <p style="color:white; background-color:black; width:100%">Copyright © 2025 <a href="~/Views/Home/Index.cshtml"> Nội Thất HOMAROOM</a>.</p>
-        </div>
+
+    <!-- Bản quyền -->
+    <div class="footer-bottom">
+        <p style="color:white">Copyright © 2025 <a href="~/Views/Home/Index.cshtml">Nội Thất HOMAROOM</a>.</p>
+    </div>
+
 
     <script type="text/javascript">
         $(document).ready(function () {

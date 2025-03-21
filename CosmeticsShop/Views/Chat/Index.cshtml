@@ -28,6 +28,7 @@
                             <th>Tên KH</th>
                             <th>Tin nhắn</th>
                             <th>Thời gian</th>
+                            <th>Thao tác</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -40,32 +41,38 @@
                                 <td>
                                     <b>@Html.DisplayFor(modelItem => item.Content)</b>
                                 </td>
-                                @if (DateTime.Now.Subtract(item.CreatedDate.Value).TotalDays <= 31)
-                                {
-                                    if (DateTime.Now.Subtract(item.CreatedDate.Value).TotalHours <= 24)
+                                <td>
+                                    @if (item.CreatedDate.HasValue)
                                     {
-                                        if (DateTime.Now.Subtract(item.CreatedDate.Value).TotalMinutes <= 60)
+                                        var timeDiff = DateTime.Now - item.CreatedDate.Value;
+                                        if (timeDiff.TotalMinutes < 1)
                                         {
-                                            <td>
-                                                @DateTime.Now.Subtract(item.CreatedDate.Value).Minutes phút trước
-                                            </td>
+                                            @:Vừa xong
+                                        }
+                                        else if (timeDiff.TotalHours < 1)
+                                        {
+                                            @: @(timeDiff.Minutes) phút trước
+                                        }
+                                        else if (timeDiff.TotalDays < 1)
+                                        {
+                                            @: @(timeDiff.Hours) giờ trước
+                                        }
+                                        else if (timeDiff.TotalDays < 31)
+                                        {
+                                            @: @(timeDiff.Days) ngày trước
                                         }
                                         else
                                         {
-                                            <td>
-                                                @DateTime.Now.Subtract(item.CreatedDate.Value).Hours giờ @DateTime.Now.Subtract(item.CreatedDate.Value).Minutes phút trước
-                                            </td>
+                                            @item.CreatedDate.Value.ToString("dd/MM/yyyy")
                                         }
                                     }
                                     else
                                     {
-                                        <td>
-                                            @DateTime.Now.Subtract(item.CreatedDate.Value).Days ngày trước
-                                        </td>
+                                        @: null
                                     }
-                                }
+                                </td>
                                 <td>
-                                    <a class="btn btn-primary btnEdit" href="@Url.Action("Chating","Chat",new { WithUserID=item.FromUserID, MessageID=item.ID})">Xem</a>
+                                    <a class="btn btn-primary btnEdit" href="@Url.Action("Chating", "Chat", new { WithUserID = item.FromUserID, MessageID = item.ID })">Xem</a>
                                 </td>
                             </tr>
                         }
