@@ -3,17 +3,17 @@
     ViewBag.Title = "Danh sách danh mục";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
-<!-- Content Header (Page header) -->
+
 <div class="content-header">
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
                 <h1 class="m-0">Quản lý danh mục</h1>
-            </div><!-- /.col -->
-        </div><!-- /.row -->
-    </div><!-- /.container-fluid -->
+            </div>
+        </div>
+    </div>
 </div>
-<!-- /.content-header -->
+
 <div class="row">
     <div class="col-12">
         <div class="card">
@@ -40,7 +40,7 @@
                 </div>
             </div>
             <a href="/CategoryManage/Add" class="btn btn-outline-success col-2">Thêm mới</a>
-            <!-- /.card-header -->
+  
             <div class="card-body table-responsive p-0">
                 <table class="table table-hover text-nowrap">
                     <thead>
@@ -77,10 +77,10 @@
                                         <button class="btn btn-outline-success" onclick="location.href='/CategoryManage/ToggleActive/@item.ID'">Mở</button>
                                     }
                                     <button class="btn btn-primary" onclick="location.href='/CategoryManage/Details/@item.ID'">Chi tiết/Sửa</button>
-                                    <form action="@Url.Action("Delete", "CategoryManage")" method="post" style="display:inline;">
-                                        <input type="hidden" name="id" value="@item.ID" />
-                                        <button type="submit" class="btn btn-danger" onclick="return confirm('Bạn có chắc chắn muốn xóa?')">Xóa</button>
-                                    </form>
+                                    <a href="/CategoryManage/Delete/@item.ID" onclick="return confirm('Bạn có chắc chắn muốn xoá danh mục này không?')" 
+                                       class="btn btn-danger btn-sm">
+                                        Xoá
+                                    </a>
                                 </td>
                                 </tr>
                             }
@@ -89,15 +89,13 @@
                         {
                             <tr>
                                 <td>
-                                    Không tìm thấy sản phẩm...
+                                    Không tìm thấy danh mục...
                                 </td>
                             </tr>
                         }
                     </tbody>
                 </table>
             </div>
-            <!-- /.card-body -->
         </div>
-        <!-- /.card -->
     </div>
 </div>

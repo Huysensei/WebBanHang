@@ -71,5 +71,13 @@ namespace CosmeticsShop.Controllers
             Session.Remove("User");
             return RedirectToAction("Index");
         }
+        public ActionResult GioiThieu()
+        {
+            return View();
+        }
+        public ActionResult LienHe()
+        {
+            return View();
+        }
     }
 }

@@ -21,14 +21,11 @@ namespace CosmeticsShop.Controllers
                 Session["Cart"] = new List<ItemCart>();
             }
             List<ItemCart> itemCarts = Session["Cart"] as List<ItemCart>;
-            // Kiểm tra sản phẩm đã tồn tại trong giỏ hàng chưa
             ItemCart check = itemCarts.FirstOrDefault(x => x.ProductID == ProductID);
-            // Kiểm tra số lượng tồn
             if (itemCarts.Count > 0 && check!= null && product.Quantity <= check.Quantity)
             {
                 return Json(new { status = false }, JsonRequestBehavior.AllowGet);
             }
-            // Nếu tồn tại thì + số lượng lên 1
             if (check != null)
             {
                 for (int i = 0; i < itemCarts.Count; i++)
@@ -39,7 +36,7 @@ namespace CosmeticsShop.Controllers
                     }
                 }
             }
-            else // Nếu chưa thì thêm mới sản phẩm vào giỏ hàng
+            else
             {
                 itemCarts.Add(new ItemCart() { ProductID = product.ID, ProductName = product.Name, ProductPrice = product.Price.Value, ProductImage = product.Image1, Quantity = 1 });
             }
@@ -109,7 +106,6 @@ namespace CosmeticsShop.Controllers
         public ActionResult AddOrder(string payment = "")
         {
             Models.User user = Session["User"] as Models.User;
-            //Add order
             Models.Order order = new Models.Order();
             order.DateOrder = DateTime.Now;
             order.DateShip = DateTime.Now.AddDays(3);
@@ -120,7 +116,6 @@ namespace CosmeticsShop.Controllers
             db.SaveChanges();
             int o = db.Orders.OrderByDescending(p => p.ID).FirstOrDefault().ID;
             Session["OrderId"] = o;
-            //Add order detail
             List<ItemCart> listCart = Session["Cart"] as List<ItemCart>;
             foreach (ItemCart item in listCart)
             {
@@ -134,7 +129,6 @@ namespace CosmeticsShop.Controllers
                 db.OrderDetails.Add(orderDetail);
             }
             db.SaveChanges();
-            // Payment
             if (payment == "paypal")
             {
                 return RedirectToAction("PaymentWithPaypal", "Payment");
@@ -143,7 +137,7 @@ namespace CosmeticsShop.Controllers
             {
                 return RedirectToAction("PaymentWithMomo", "Payment");
             }
-            SentMail("Đặt hàng thành công", user.Email, "pnh5523@gmail.com", "bcjc qtgx dlft vvpm", "<p style=\"font-size:20px\">Cảm ơn bạn đã đặt hàng<br/>Mã đơn hàng của bạn là: " + order.ID);
+            SentMail("[HOMARoom] - Thông báo đặt hàng thành công", user.Email, "pnh5523@gmail.com", "bcjc qtgx dlft vvpm", "<p style=\"font-size:20px\">Cảm ơn bạn đã đặt hàng<br/>Mã đơn hàng của bạn là: " + order.ID);
             Session.Remove("Cart");
             Session.Remove("OrderID");
             return RedirectToAction("Message", new { mess = "Đặt hàng thành công" });

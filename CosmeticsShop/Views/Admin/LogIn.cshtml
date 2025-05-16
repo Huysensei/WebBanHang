@@ -1,73 +1,143 @@
-﻿
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="vi">
 @{
-    ViewBag.Title = "Login";
+    ViewBag.Title = "Đăng nhập";
     Layout = null;
 }
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Log in</title>
-    <!-- Google Font: Source Sans Pro -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="~/Content/Admin/plugins/fontawesome-free/css/all.min.css">
-    <!-- icheck bootstrap -->
-    <link rel="stylesheet" href="~/Content/Admin/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
-    <!-- Theme style -->
-    <link rel="stylesheet" href="~/Content/Admin/css/adminlte.min.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Đăng nhập</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background: #f1fdf3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background: white;
+            width: 800px;
+            max-width: 90%;
+            border-radius: 12px;
+            display: flex;
+            box-shadow: 0 10px 30px rgba(0, 128, 0, 0.2);
+            overflow: hidden;
+            border-left: 8px solid #4CAF50;
+        }
+
+        .login-left {
+            flex: 1;
+            padding: 40px 30px;
+        }
+
+            .login-left h2 {
+                margin-bottom: 10px;
+                font-size: 22px;
+                color: #333;
+            }
+
+            .login-left p {
+                font-size: 14px;
+                color: #666;
+                margin-bottom: 25px;
+            }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+            .form-group input {
+                width: 92%;
+                padding: 12px;
+                border: 1px solid #ccc;
+                border-radius: 6px;
+                font-size: 14px;
+            }
+
+        .form-check {
+            margin-bottom: 15px;
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 12px;
+            background: #4CAF50;
+            border: none;
+            color: white;
+            font-weight: bold;
+            border-radius: 6px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .forgot {
+            text-align: right;
+            margin-top: 10px;
+        }
+
+            .forgot a {
+                color: #e67e22;
+                font-size: 13px;
+                text-decoration: none;
+            }
+
+        .login-right {
+            flex: 1;
+            background: #ffffff;
+            padding: 30px;
+            border-left: 1px solid #eee;
+            text-align: center;
+        }
+
+            .login-right img {
+                max-width: 100%;
+                height: auto;
+                padding-top: 30px;
+            }
+
+        .error-message {
+            color: red;
+            font-size: 13px;
+            margin-top: 10px;
+        }
+    </style>
 </head>
-<body class="hold-transition login-page">
-    <div class="login-box">
-        <div class="login-logo">
-            <b>Quản lý </b>
+<body>
+    <div class="login-container">
+        <div class="login-left">
+            <h2>Log in.</h2>
+            <p>Login with your admin credentials.</p>
+            @using (Html.BeginForm("LogIn", "Admin", FormMethod.Post))
+            {
+                <div class="form-group">
+                    <input name="username" type="text" placeholder="name@domain.com" required />
+                </div>
+                <div class="form-group">
+                    <input name="password" type="password" placeholder="Password" required />
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" id="keepLoggedIn" />
+                    <label for="keepLoggedIn"> Keep me logged in</label>
+                </div>
+                <button type="submit" class="btn-login">Log In</button>
+                <div class="row">
+                    @if (ViewBag.Error != null)
+                    {
+                        <h6 style="color:red">@ViewBag.Error</h6>
+                    }
+                </div>
+            }
         </div>
-        <!-- /.login-logo -->
-        <div class="card">
-            <div class="card-body login-card-body">
-                <p class="login-box-msg"> Đăng nhập</p>
-                @using (Html.BeginForm("LogIn", "Admin", FormMethod.Post))
-                {
-                    <div class="input-group mb-3">
-                        <input name="username" type="text" class="form-control" placeholder="Tài khoản...">
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-envelope"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="input-group mb-3">
-                        <input name="password" type="password" class="form-control" placeholder="Mật khẩu..">
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-lock"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <button type="submit" class="btn btn-primary btn-block">Đăng nhập</button>
-                    </div>
-                    <div class="row">
-                        @if (ViewBag.Error != null)
-                        {
-                            <h6 style="color:red">@ViewBag.Error</h6>
-                        }
-                    </div>
-                }
-            </div>
+        <div class="login-right">
+            <img src="~/Content/images/adminlogin.jpg" alt="login illustration" />          
         </div>
     </div>
-    <!-- /.login-box -->
-    <!-- jQuery -->
-    <script src="~/Content/Admin/plugins/jquery/jquery.min.js"></script>
-    <!-- Bootstrap 4 -->
-    <script src="~/Content/Admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- AdminLTE App -->
-    <script src="~/Content/dist/js/adminlte.min.js"></script>
 </body>
 </html>
-
-
-

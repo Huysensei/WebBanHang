@@ -19,7 +19,6 @@ namespace CosmeticsShop.Controllers
             }
             return false;
         }
-        // GET: OrderManage
         public ActionResult Index()
         {
             if (CheckRole("Admin"))

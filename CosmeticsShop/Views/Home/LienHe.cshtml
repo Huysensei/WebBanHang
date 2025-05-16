@@ -1,0 +1,161 @@
+﻿@{
+    ViewBag.Title = "Trang chủ";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+
+    List<CosmeticsShop.Models.Product> products = ViewBag.ListProduct as List<CosmeticsShop.Models.Product>;
+}
+
+<style>
+    .lien-he-container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #333;
+    }
+
+        .lien-he-container .header {
+            background: linear-gradient(135deg, #8B4513, #A0522D);
+            color: white;
+            padding: 60px 30px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .lien-he-container .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background: #D2691E;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: background 0.3s ease;
+        }
+
+            .lien-he-container .btn:hover {
+                background: #a7490e;
+            }
+
+    section {
+        padding: 50px 0;
+        text-align: center;
+    }
+
+        section h2 {
+            font-size: 28px;
+            color: #8B4513;
+            margin-bottom: 15px;
+        }
+
+    .loi-ich-grid,
+    .bao-chi-grid {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 25px;
+        margin-top: 20px;
+    }
+
+    .loi-ich-item,
+    .bao-chi-item {
+        background: #fff8f0;
+        padding: 20px;
+        border-radius: 12px;
+        width: 220px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s;
+    }
+
+        .loi-ich-item:hover,
+        .bao-chi-item:hover {
+            transform: translateY(-5px);
+        }
+
+    .thong-ke {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        background: #f1f1f1;
+        border-radius: 12px;
+        padding: 30px;
+        margin: 0 auto;
+        gap: 20px;
+    }
+
+    .stat {
+        flex: 1 1 200px;
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        font-size: 22px;
+        font-weight: bold;
+        color: #A0522D;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        text-align: center;
+    }
+
+    .khach-hang p,
+    .lien-he p {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+</style>
+
+<div class="lien-he-container">
+    <div class="header">
+        <h1>HOMAROOM Home Living Partnership</h1>
+        <h2>TRỞ THÀNH NHÀ CUNG CẤP CHIẾN LƯỢC</h2>
+        <p>Đồng hành cùng HOMAROOM, nâng tầm thương hiệu</p>
+        <a href="#hop-tac" class="btn">LIÊN HỆ HỢP TÁC</a>
+    </div>
+
+    <section class="chuong-trinh">
+        <h2>CHƯƠNG TRÌNH</h2>
+        <img src="~/Content/images/LienHe/Lienhe1.jpg.png"/>
+        <p>HOMAROOM đang tìm kiếm các đối tác cung cấp sản phẩm và dịch vụ chất lượng cao nhằm mở rộng hệ thống và mang lại giá trị tốt nhất cho khách hàng.</p>
+        <p>
+            HOMAROOM đang tìm kiếm các đối tác chiến lược trong lĩnh vực sản xuất và phân phối các sản phẩm như: Vật phẩm trang trí, đồ dùng nhà bếp, nệm và các sản phẩm liên quan, nhằm mở rộng thị trường, nâng cao vị thế.
+
+            HOMAROOM hiện đang là một trong những thương hiệu nội thất hàng đầu Việt Nam, với mục tiêu không chỉ dừng lại ở thị trường nội thất, HOMAROOM mong muốn liên kết với các đối tác để tạo nên những giá trị vượt trội, đáp ứng nhu cầu sống ngày càng cao của khách hàng, cùng chinh phục ngành hàng Nhà cửa - Đời sống
+        </p>
+    </section>
+
+    <section class="loi-ich">
+        <h2>LỢI ÍCH KHI HỢP TÁC CÙNG HOMAROOM</h2>
+        <div class="loi-ich-grid">
+            <div class="loi-ich-item">✔️ Hệ thống khách hàng lớn</div>
+            <div class="loi-ich-item">✔️ Hỗ trợ chiến lược marketing</div>
+            <div class="loi-ich-item">✔️ Mở rộng thị trường</div>
+            <div class="loi-ich-item">✔️ Đối tác phát triển vững bền</div>
+        </div>
+    </section>
+
+    <section class="thong-ke">
+        <div class="stat">40M+ Doanh thu</div>
+        <div class="stat">500+ Đối tác</div>
+        <div class="stat">4000+ Sản phẩm</div>
+        <div class="stat">25+ Showroom</div>
+    </section>
+
+    <section class="bao-chi">
+        <h2>BÁO CHÍ NÓI VỀ HOMAROOM</h2>
+        <div class="bao-chi-grid">
+            <div class="bao-chi-item">📢 Bài viết về HOMAROOM trên báo lớn</div>
+            <div class="bao-chi-item">📢 Đánh giá từ chuyên gia</div>
+        </div>
+    </section>
+
+    <section class="khach-hang">
+        <h2>KHÁCH HÀNG CỦA HOMAROOM</h2>
+        <p>Các đối tác lớn như Vinhomes, Ecopark...</p>
+    </section>
+
+    <section class="lien-he" id="hop-tac">
+        <h2>LIÊN HỆ VỚI HOMAROOM</h2>
+        <p>Để trao đổi chi tiết về chính sách hợp tác, vui lòng liên hệ:</p>
+        <a href="mailto:contact@HOMAROOM.com" class="btn">LIÊN HỆ NGAY</a>
+    </section>
+</div>

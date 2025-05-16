@@ -6,31 +6,26 @@
 @{
     List<CosmeticsShop.Models.Category> categoryies = ViewBag.CategoryList as List<CosmeticsShop.Models.Category>;
 }
-<!-- Content Header (Page header) -->
 <div class="content-header">
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
                 <h1 class="m-0">Thêm mới</h1>
-            </div><!-- /.col -->
+            </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="#">Thêm mới</a></li>
                 </ol>
-            </div><!-- /.col -->
-        </div><!-- /.row -->
-    </div><!-- /.container-fluid -->
+            </div>
+        </div>
+    </div>
 </div>
-<!-- /.content-header -->
+
 <section class="content">
     <div class="container-fluid">
         <div class="row">
-            <!-- left column -->
             <div class="col-md-12">
-                <!-- general form elements -->
                 <div class="card card-primary">
-                    <!-- /.card-header -->
-                    <!-- form start -->
                     @using (Html.BeginForm("Add", "ProductManage", FormMethod.Post, new { @enctype = "multipart/form-data" }))
                     {
                         <div class="card-body">
@@ -72,7 +67,6 @@
                                 <textarea class="form-control" required name="Description"></textarea>
                             </div>
                         </div>
-                        <!-- /.card-body -->
                         <div class="card-footer">
                             <a href="/ProductManage/" class="btn btn-default">Trở lại</a>
                             <button type="submit" class="btn btn-primary">Lưu</button>

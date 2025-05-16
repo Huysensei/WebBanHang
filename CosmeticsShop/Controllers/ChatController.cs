@@ -56,12 +56,10 @@ namespace CosmeticsShop.Controllers
             IEnumerable<Message> listMessage;
             if (MessageID != 0)
             {
-                //Update Sent
                 Message message = db.Messages.Find(MessageID);
                 if (!message.Send.Value)
                 {
                     message.Send = true;
-                  //  db.Messages.AddOrUpdate(message);
                     db.SaveChanges();
                 }
 
@@ -75,7 +73,6 @@ namespace CosmeticsShop.Controllers
             return View();
         }
 
-        // GET: Message
         [AllowAnonymous]
         [HttpGet]
         public JsonResult GetAllMessageChating(int UserID)

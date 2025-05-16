@@ -34,7 +34,44 @@
                     }
                 },
             });
-        })
+        });
+        var fullDescription = $('.full-description').html();
+        var shortDescription = truncateDescription(fullDescription, 4);
+
+        if (isDescriptionLong(fullDescription)) {
+            $('.short-description').html(shortDescription);
+            $('.description-container .see-more').show();
+        } else {
+            $('.short-description').html(fullDescription);
+            $('.description-container .see-more').hide();
+        }
+
+        $('.see-more').click(function (e) {
+            e.preventDefault();
+            if ($(this).hasClass('expanded')) {
+                $('.short-description').html(shortDescription);
+                $(this).text('Xem thêm');
+                $(this).removeClass('expanded');
+            } else {
+                $('.short-description').html(fullDescription);
+                $(this).text('Thu gọn');
+                $(this).addClass('expanded');
+            }
+        });
+        function isDescriptionLong(text) {
+            var lines = text.split('<br>');
+            return lines.length > 4;
+        }
+
+        function truncateDescription(text, lines) {
+            var splitText = text.split('<br>');
+            if (splitText.length <= lines) {
+                return text;
+            }
+
+            var truncated = splitText.slice(0, lines).join('<br>');
+            return truncated;
+        }
     });
 </script>
 <div class="breadcrumbs">
@@ -52,19 +89,19 @@
             <div class="col-md-5 grid">
                 <div class="flexslider">
                     <ul class="slides">
-                        <li data-thumb="@Url.Content("~/Content/images/" + Model.Image1)">
-                            <div class="thumb-image"> <img src="@Url.Content("~/Content/images/" + Model.Image1)" data-imagezoom="true" class="img-responsive"> </div>
+                        <li data-thumb="@Url.Content("~/Content/images/SanPham/" + Model.Image1)">
+                            <div class="thumb-image"> <img src="@Url.Content("~/Content/images/SanPham/" + Model.Image1)" data-imagezoom="true" class="img-responsive"> </div>
                         </li>
                         @if (Model.Image2 != null)
                         {
-                            <li data-thumb="@Url.Content("~/Content/images/" + Model.Image2)">
-                                <div class="thumb-image"> <img src="@Url.Content("~/Content/images/" + Model.Image2)" data-imagezoom="true" class="img-responsive"> </div>
+                            <li data-thumb="@Url.Content("~/Content/images/SanPham/" + Model.Image2)">
+                                <div class="thumb-image"> <img src="@Url.Content("~/Content/images/SanPham/" + Model.Image2)" data-imagezoom="true" class="img-responsive"> </div>
                             </li>
                         }
                         @if (Model.Image3 != null)
                         {
-                            <li data-thumb="@Url.Content("~/Content/images/" + Model.Image3)">
-                                <div class="thumb-image"> <img src="@Url.Content("~/Content/images/" + Model.Image3)" data-imagezoom="true" class="img-responsive"> </div>
+                            <li data-thumb="@Url.Content("~/Content/images/SanPham/" + Model.Image3)">
+                                <div class="thumb-image"> <img src="@Url.Content("~/Content/images/SanPham/" + Model.Image3)" data-imagezoom="true" class="img-responsive"> </div>
                             </li>
                         }
                     </ul>
@@ -92,7 +129,12 @@
                     <hr />
                     <label style="color:black" class="add-to item_price">@Model.Price.Value.ToString("#,##")₫</label>
                     <hr />
-                    <p class="description">@Html.Raw(Model.Description.Replace("\n", "<br>"))</p>
+
+                    <div class="description-container">
+                        <div class="full-description" style="display: none;">@Html.Raw(Model.Description.Replace("\n", "<br>"))</div>
+                        <p class="short-description description"></p>
+                        <a href="#" class="see-more" style="color: blue; text-decoration: underline; display: none;">Xem thêm</a>
+                    </div>
 
                     <a style="background-color:orangered" href="#" class="cart item_add" data-id="@Model.ID">Thêm vào giỏ hàng</a>
                 </div>

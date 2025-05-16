@@ -12,7 +12,7 @@ namespace CosmeticsShop.Extensions
         private static RNGCryptoServiceProvider rngCsp = new RNGCryptoServiceProvider();
         public MoMoSecurity()
         {
-            //encrypt and decrypt password using secure
+        
         }
         public string getHash(string partnerCode, string merchantRefId,
             string amount, string paymentCode, string storeId, string storeName, string publicKeyXML)
@@ -60,7 +60,6 @@ namespace CosmeticsShop.Extensions
             {
                 try
                 {
-                    // client encrypting data with public key issued by server
                     rsa.FromXmlString(publicKey);
                     var encryptedData = rsa.Encrypt(data, false);
                     var base64Encrypted = Convert.ToBase64String(encryptedData);
@@ -92,7 +91,6 @@ namespace CosmeticsShop.Extensions
             {
                 try
                 {
-                    // client encrypting data with public key issued by server
                     rsa.FromXmlString(publicKey);
                     var encryptedData = rsa.Encrypt(data, false);
                     var base64Encrypted = Convert.ToBase64String(encryptedData);

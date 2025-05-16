@@ -6,7 +6,7 @@
 <div class="breadcrumbs">
     <div class="container">
         <ol class="breadcrumb breadcrumb1 animated wow slideInLeft animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: slideInLeft;">
-            <li><a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Trang chủ</a></li>
+            <li><a style="color:black" href="/"><span style="color: black;" class="glyphicon glyphicon-home" aria-hidden="true"></span>Trang chủ</a></li>
             <li class="active">Chi tiết</li>
         </ol>
     </div>
@@ -14,7 +14,7 @@
 <!--content-->
 <div class="products">
     <div class="container">
-        <h2>Chi tiết đơn đặt hàng: @Request.Params["ID"]</h2>
+        <h2 style="color:black">Chi tiết đơn đặt hàng: @Request.Params["ID"]</h2>
         <div class="col-md-9">
             <table class="table">
                 <thead>
@@ -32,7 +32,7 @@
                         {
                             <tr>
                                 <td>@item.ProductName</td>
-                                <td><img src="~/Content/images/@item.ProductImage" alt="Alternate Text" style="width:50px;height:80px" /></td>
+                                <td><img src="~/Content/images/SanPham/@item.ProductImage" alt="Alternate Text" style="width:50px;height:80px" /></td>
                                 <td>@item.ProductPrice</td>
                                 <td>@item.Quantity</td>
                             </tr>

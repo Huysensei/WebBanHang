@@ -17,30 +17,17 @@ namespace CosmeticsShop.Controllers
     public class PaymentController : Controller
     {
         ShoppingEntities db = new ShoppingEntities();
-        // GET: Payment
         public ActionResult PaymentWithPaypal(string Cancel = null)
         {
-            //getting the apiContext  
             APIContext apiContext = PaypalConfiguration.GetAPIContext();
             try
             {
-                //A resource representing a Payer that funds a payment Payment Method as paypal  
-                //Payer Id will be returned when payment proceeds or click to pay  
                 string payerId = Request.Params["PayerID"];
                 if (string.IsNullOrEmpty(payerId))
                 {
-                    //this section will be executed first because PayerID doesn't exist  
-                    //it is returned by the create function call of the payment class  
-                    // Creating a payment  
-                    // baseURL is the url on which paypal sendsback the data.  
                     string baseURI = Request.Url.Scheme + "://" + Request.Url.Authority + "/Payment/PaymentWithPayPal?";
-                    //here we are generating guid for storing the paymentID received in session  
-                    //which will be used in the payment execution  
                     var guid = Convert.ToString((new Random()).Next(100000));
-                    //CreatePayment function gives us the payment approval url  
-                    //on which payer is redirected for paypal account payment  
                     var createdPayment = this.CreatePayment(apiContext, baseURI + "guid=" + guid);
-                    //get links returned from paypal in response to Create function call  
                     var links = createdPayment.links.GetEnumerator();
                     string paypalRedirectUrl = null;
                     while (links.MoveNext())
@@ -48,20 +35,16 @@ namespace CosmeticsShop.Controllers
                         Links lnk = links.Current;
                         if (lnk.rel.ToLower().Trim().Equals("approval_url"))
                         {
-                            //saving the payapalredirect URL to which user will be redirected for payment  
                             paypalRedirectUrl = lnk.href;
                         }
                     }
-                    // saving the paymentID in the key guid  
                     Session.Add(guid, createdPayment.id);
                     return Redirect(paypalRedirectUrl);
                 }
                 else
                 {
-                    // This function exectues after receving all parameters for the payment  
                     var guid = Request.Params["guid"];
                     var executedPayment = ExecutePayment(apiContext, payerId, Session[guid] as string);
-                    //If executed payment failed then we will show payment failure message to user  
                     if (executedPayment.state.ToLower() != "approved")
                     {
                         return RedirectToAction("Message", "Cart", new { mess = "Lỗi" });
@@ -76,7 +59,6 @@ namespace CosmeticsShop.Controllers
                 });
             }
             Session.Remove("Cart");
-            //update paid
             Models.Order order = db.Orders.Find(Convert.ToInt32(Session["OrderId"]));
             order.IsPaid = true;
             db.SaveChanges();
@@ -290,16 +272,13 @@ namespace CosmeticsShop.Controllers
             string signature = crypto.signSHA256(param, serectKey);
             if (signature != Request["signature"].ToString())
             {
-                //Fail
             }
             string status_code = Request["status_code"].ToString();
             if (status_code != "0")
             {
-                //Fail
             }
             else
             {
-                //Success
             }
             return Json("", JsonRequestBehavior.AllowGet);
         }

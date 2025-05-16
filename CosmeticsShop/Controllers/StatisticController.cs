@@ -21,7 +21,6 @@ namespace CosmeticsShop.Controllers
             }
             return false;
         }
-        // GET: Statistic
         public ActionResult Index(DateTime from, DateTime to)
         {
             if (CheckRole("Admin"))

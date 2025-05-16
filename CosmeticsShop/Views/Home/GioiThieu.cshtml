@@ -1,0 +1,123 @@
+﻿
+@{
+    ViewBag.Title = "Trang chủ";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+
+    List<CosmeticsShop.Models.Product> products = ViewBag.ListProduct as List<CosmeticsShop.Models.Product>;
+}
+
+<style>
+    .gioi-thieu-container {
+        width: 80%;
+        margin: 0 auto;
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        text-align: justify;
+    }
+
+        .gioi-thieu-container h1, .gioi-thieu-container h2 {
+            color: #8B4513;
+            margin-bottom: 10px;
+            text-align: center;
+            padding: 10px 0px;
+            margin: 0px;
+        }
+
+    .image-container {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+        .image-container img {
+            width: 200px;
+            height: auto;
+            border-radius: 8px;
+        }
+</style>
+
+<div class="gioi-thieu-container">
+    <div class="brand-story" style="font-family: Arial, sans-serif; color: #333; line-height: 1.8;">
+        <h2 style="font-weight: 700;">Brand Story</h2>
+
+        <p>
+            Mỗi một chi tiết, mỗi một sản phẩm và hình ảnh đều là những dấu ấn, là câu chuyện mà HOMAROOM muốn gửi gắm đến mỗi khách hàng.
+            HOMAROOM hi vọng trong từng bộ sưu tập, từng sản phẩm và dịch vụ của mình sẽ trở thành một phần trong tổ ấm của mỗi gia đình Việt,
+            như một thông điệp <strong>"mang yêu thương gửi trọn trong từng không gian sống"</strong>. Hướng đến sự tiện ích, hiện đại tối giản
+            và thân thiện môi trường là khát khao mà HOMAROOM không ngừng theo đuổi.
+        </p>
+
+        <p>
+            Chính những khát khao lan toả biến nhà thực sự là <strong><em>"tổ ấm"</em></strong>, tháng 03/2020, thương hiệu nội thất HOMAROOM được định hình và ra đời.
+            Là một phần của Savimex với gần 40 năm kinh nghiệm trong sản xuất và xuất khẩu nội thất sang các thị trường khó tính như: Mỹ, Nhật, Hàn,…
+            HOMAROOM tiếp tục kế thừa và phát huy nhằm mang đến cho người Việt những sản phẩm nội thất
+            <strong>100% made in Vietnam</strong> theo tiêu chuẩn quốc tế, đảm bảo an toàn sức khỏe với chi phí hợp lý.
+        </p>
+
+        <blockquote style="border-left: 4px solid #ccc; padding-left: 15px; margin: 20px 0;">
+            <h3 style="font-weight: bold; margin: 0;">HƯỚNG ĐẾN GIÁ TRỊ BỀN VỮNG</h3>
+        </blockquote>
+
+        <p>
+            “Tính bền vững” là một khái niệm định nghĩa sự phát triển về mọi mặt nhưng vẫn đảm bảo sự tồn tại phát triển ở trạng thái cân bằng.
+            Mang khái niệm “bền vững” vào trong sản phẩm - dịch vụ nội thất là bước đi tiên phong và đầy thách thức mà HOMAROOM luôn không ngừng nỗ lực
+            nhằm lan toả, truyền cảm hứng về một lối sống tích cực, tiêu dùng bền vững hơn vì một tương lai của hành tinh xanh.
+        </p>
+
+        <p><strong>Mục tiêu phát triển bền vững:</strong></p>
+        <ul style="margin-left: 50px">
+            <li>Truyền cảm hứng về tiêu dùng bền vững đến mọi người tại Việt Nam.</li>
+            <li>Sử dụng 100% nguồn nguyên liệu gỗ đạt chứng nhận <a href="#" style="text-decoration: underline;">chứng nhận FSC® - Forest Stewardship Council®</a>.</li>
+            <li><u>Bảo trì trọn đời</u> sản phẩm nhằm kéo dài tuổi thọ và tính hữu dụng của sản phẩm trong thời gian dài.</li>
+        </ul>
+    </div>
+    <br />
+    <div class="environment-section" style="font-family: Arial, sans-serif; color: #333; line-height: 1.8; margin-bottom: 40px;">
+        <blockquote style="border-left: 4px solid #ccc; padding-left: 15px; margin: 20px 0;">
+            <h3 style="font-weight: bold; margin: 0;">THÂN THIỆN MÔI TRƯỜNG</h3>
+        </blockquote>
+        <p>
+            HOMAROOM với xuất phát điểm muốn lan toả thông điệp <strong>"Sống xanh"</strong>, mỗi một sản phẩm nội thất mà HOMAROOM mang đến cho khách hàng
+            đều là bắt nguồn từ nguyên liệu gỗ đạt chuẩn FSC – khai thác từ nguồn rừng có trồng lại. HOMAROOM hiểu rằng, là một doanh nghiệp nội chung,
+            và là doanh nghiệp trong lĩnh vực nội thất nói riêng, cần có trách nhiệm hơn với cộng đồng và môi trường xanh của chúng ta.
+            Giá trị tốt đẹp này không chỉ riêng HOMAROOM mà mỗi một khách hàng sử dụng sản phẩm HOMAROOM đều đóng góp và nhân rộng lên giá trị bền vững này.
+        </p>
+
+        <div class="environment-image" style="margin-top: 20px;">
+            <img src="~/Content/images/GioiThieu/gioithieu1.jpg" alt="100% nguyên liệu gỗ FSC" style="width: 100%; max-width: 1000px; height: auto; display: block; margin: 0 auto;">
+        </div>
+    </div>
+    <div class="health-safety-section" style="font-family: Arial, sans-serif; color: #333; line-height: 1.8; margin-bottom: 40px;">
+        <blockquote style="border-left: 4px solid #ccc; padding-left: 15px; margin: 20px 0;">
+            <h3 style="font-weight: bold;">AN TOÀN SỨC KHỎE</h3>
+        </blockquote>
+        <p>
+            Đặt yếu tố <strong>sức khoẻ và an toàn</strong> khách hàng lên hàng đầu, các sản phẩm nội thất gỗ công nghiệp tại HOMAROOM:
+        </p>
+        <ul style="padding-left: 20px;">
+            <li>Đạt chứng nhận chứng nhận giảm phát thải Formaldehyde – CARB P2, đảm bảo gỗ không độc hại.</li>
+            <li>Ưu tiên sử dụng sơn gốc nước thay cho sơn gốc dầu.</li>
+            <li>Trang bị bộ anti tip kit đối với tủ quần áo và tủ giày VIENNA, tránh tình trạng tủ bị lật, gây nguy hiểm, đặc biệt là những gia đình có trẻ nhỏ.</li>
+        </ul>
+        <p>
+            Tại hầu hết các nước trên thế giới đều qui định nghiêm ngặt về tiêu chuẩn an toàn CARB - P2 đối với các sản phẩm gỗ công nghiệp, cũng như các yếu tố an toàn trong quá trình sử dụng, HOMAROOM tin rằng việc tiên phong về tiêu chuẩn sức khoẻ - an toàn người dùng sẽ là điểm mạnh mang thương hiệu nội thất của người Việt vươn tầm quốc tế trong tương lai.
+        </p>
+
+        <div class="health-images" style="display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px;">
+            <div style="flex: 1; min-width: 200px; text-align: center;">
+                <img src="~/Content/images//GioiThieu/gioithieu21.jpg" alt="CARB-P2" style="width: 100%; max-width: 300px; height: auto;">
+                <p><strong>CARB-P2</strong></p>
+            </div>
+            <div style="flex: 1; min-width: 200px; text-align: center;">
+                <img src="~/Content/images//GioiThieu/gioithieu22.jpg" style="width: 100%; max-width: 300px; height: auto;">
+                <p><strong>Water-based</strong></p>
+            </div>
+            <div style="flex: 1; min-width: 200px; text-align: center;">
+                <img src="~/Content/images//GioiThieu/gioithieu23.jpg" alt="Anti-Tip Kit" style="width: 100%; max-width: 300px; height: auto;">
+                <p><strong>Anti-Tip Kit</strong></p>
+            </div>
+        </div>
+    </div>
+
+</div>

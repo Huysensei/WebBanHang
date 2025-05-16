@@ -3,17 +3,17 @@
     ViewBag.Title = "Đơn đặt hàng: " + Request.Params["ID"];
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
-<!-- Content Header (Page header) -->
+
 <div class="content-header">
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
                 <h1 class="m-0">Chi tiết đơn đặt hàng: @Request.Params["ID"]</h1>
-            </div><!-- /.col -->
-        </div><!-- /.row -->
-    </div><!-- /.container-fluid -->
+            </div>
+        </div>
+    </div>
 </div>
-<!-- /.content-header -->
+
 <div class="row">
     <div class="col-12">
         <div class="card">
@@ -55,8 +55,6 @@
                     <a href="/OrderManage/Processed/@Request.Params["ID"]" class="btn btn-primary float-right">Duyệt</a>
                 }
             </div>
-            <!-- /.card-body -->
         </div>
-        <!-- /.card -->
     </div>
 </div>

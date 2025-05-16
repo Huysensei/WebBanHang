@@ -17,7 +17,7 @@ namespace CosmeticsShop.Hubs
             var tableDependency = new SqlTableDependency<Message>(ConfigurationManager.ConnectionStrings["ShoppingConnectionString"].ConnectionString, tableName: "Message", schemaName: "dbo", executeUserPermissionCheck: false, includeOldValues: true);
             tableDependency.OnChanged += TableDependency_Changed;
             tableDependency.OnError += TableDependency_OnError;
-            tableDependency.Start();
+           // tableDependency.Start();
         }
 
         private void TableDependency_Changed(object sender, RecordChangedEventArgs<Message> e)

@@ -20,7 +20,6 @@ namespace CosmeticsShop.Controllers
             }
             return false;
         }
-        // GET: ProductManage
         public ActionResult Index(string keyword = "")
         {
             if (CheckRole("Admin"))
@@ -75,17 +74,12 @@ namespace CosmeticsShop.Controllers
 
             for (int i = 0; i < ImageUpload.Length; i++)
             {
-                //Check content image
                 if (ImageUpload[i] != null && ImageUpload[i].ContentLength > 0)
                 {
-                    //Get file name
                     var fileName = Path.GetFileName(ImageUpload[i].FileName);
-                    //Get path
-                    var path = Path.Combine(Server.MapPath("~/Content/images"), fileName);
-                    //Check exitst
+                    var path = Path.Combine(Server.MapPath("~/Content/images/SanPham"), fileName);
                     if (!System.IO.File.Exists(path))
                     {
-                        //Add image into folder
                         ImageUpload[i].SaveAs(path);
                     }
                 }
@@ -115,15 +109,14 @@ namespace CosmeticsShop.Controllers
         }
         public ActionResult Add()
         {
-            if (CheckRole("Admin"))
-            {
-
-            }
-            else
+            if (!CheckRole("Admin"))
             {
                 return RedirectToAction("Index", "Admin");
             }
+
             ViewBag.CategoryList = db.Categories.Where(x => x.IsActive == true).ToList();
+
+            ViewBag.Message = TempData["Message"];
             return View();
         }
         [HttpPost]
@@ -131,17 +124,12 @@ namespace CosmeticsShop.Controllers
         {
             for (int i = 0; i < ImageUpload.Length; i++)
             {
-                //Check content image
                 if (ImageUpload[i] != null && ImageUpload[i].ContentLength > 0)
                 {
-                    //Get file name
                     var fileName = Path.GetFileName(ImageUpload[i].FileName);
-                    //Get path
-                    var path = Path.Combine(Server.MapPath("~/Content/images"), fileName);
-                    //Check exitst
+                    var path = Path.Combine(Server.MapPath("~/Content/images/SanPham"), fileName);
                     if (!System.IO.File.Exists(path))
                     {
-                        //Add image into folder
                         ImageUpload[i].SaveAs(path);
                     }
                 }
@@ -166,11 +154,31 @@ namespace CosmeticsShop.Controllers
             db.Products.Add(product);
             db.SaveChanges();
 
-            ViewBag.CategoryList = db.Categories.Where(x => x.IsActive == true).ToList();
-            ViewBag.Message = "Thêm thành công";
-            return View("Details", product);
+            TempData["Message"] = "Thêm thành công";
+            return RedirectToAction("Add");
         }
-        
+        public ActionResult Delete(int id)
+        {
+            if (!CheckRole("Admin"))
+            {
+                return RedirectToAction("Index", "Admin");
+            }
+
+            Product product = db.Products.Find(id);
+            if (product != null)
+            {
+                db.Products.Remove(product);
+                db.SaveChanges();
+                TempData["Message"] = "Xóa sản phẩm thành công";
+            }
+            else
+            {
+                TempData["Message"] = "Không tìm thấy sản phẩm cần xóa";
+            }
+
+            return RedirectToAction("Index");
+        }
+
 
     }
 }

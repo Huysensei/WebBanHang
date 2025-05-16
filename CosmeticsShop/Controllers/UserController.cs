@@ -22,7 +22,6 @@ namespace CosmeticsShop.Controllers
             }
             return false;
         }
-        // GET: User
         public ActionResult Index()
         {
             return View();
@@ -105,7 +104,6 @@ namespace CosmeticsShop.Controllers
             order.DateShip = DateTime.Now;
             db.SaveChanges();
 
-            // Cập nhật sản phẩm
             List<OrderDetail> orderDetails = db.OrderDetails.Where(x => x.OrderID.Value == ID).ToList();
             foreach (var item in orderDetails)
             {
