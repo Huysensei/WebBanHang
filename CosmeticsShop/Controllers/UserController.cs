@@ -154,26 +154,7 @@ namespace CosmeticsShop.Controllers
                 db.SaveChanges();
                 return true;
             }
-        }
-        public ActionResult Login(string email, string password)
-        {
-            var user = db.Users.SingleOrDefault(u => u.Email == email && u.Password == password);
-            if (user == null)
-            {
-                ViewBag.Error = "Tài khoản hoặc mật khẩu không đúng";
-                return View();
-            }
-
-            if (user.IsConfirm != true)
-            {
-                ViewBag.Error = "Tài khoản chưa được xác minh qua email";
-                return View();
-            }
-
-            Session["User"] = user;
-            return RedirectToAction("Index", "Home");
-        }
-
+        }    
     }
     public class Profile
     {

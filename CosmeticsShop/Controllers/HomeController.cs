@@ -58,13 +58,21 @@ namespace CosmeticsShop.Controllers
         public ActionResult SignIn(string Email, string Password)
         {
             Models.User check = db.Users.SingleOrDefault(x => x.Email == Email && x.Password == Password);
-            if (check != null)
+
+            if (check == null)
             {
-                Session["User"] = check;
-                return RedirectToAction("Index", "Home");
+                ViewBag.Message = "Email hoặc mật khẩu không đúng";
+                return View();
             }
-            ViewBag.Message = "Email hoặc mật khẩu không đúng";
-            return View();
+
+            if (check.IsConfirm != true)
+            {
+                ViewBag.Message = "Tài khoản chưa xác minh qua email. Vui lòng check gmail";
+                return View();
+            }
+
+            Session["User"] = check;
+            return RedirectToAction("Index", "Home");
         }
         public ActionResult SignOut()
         {
