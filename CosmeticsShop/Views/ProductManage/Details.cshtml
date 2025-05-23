@@ -1,6 +1,6 @@
 ﻿@model CosmeticsShop.Models.Product
 @{
-    ViewBag.Title = @Model.Name;
+    ViewBag.Title = "Chỉnh sửa sản phẩm";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 @{
@@ -10,11 +10,13 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1 class="m-0">Xem/Sửa sản phẩm</h1>
+                <h1 class="m-0 text-dark"><i class="fas fa-edit mr-2"></i>Chỉnh sửa sản phẩm</h1>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="#">Xem/Sửa sản phẩm</a></li>
+                    <li class="breadcrumb-item"><a href="/Admin/Dashboard">Trang chủ</a></li>
+                    <li class="breadcrumb-item"><a href="/ProductManage">Quản lý sản phẩm</a></li>
+                    <li class="breadcrumb-item active">Chỉnh sửa</li>
                 </ol>
             </div>
         </div>
@@ -25,79 +27,143 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <div class="card card-primary">
+                <div class="card card-primary card-outline">
                     <div class="card-header">
-                        <h3 class="card-title">@Model.Name</h3>
+                        <h3 class="card-title"><i class="fas fa-box-open mr-1"></i>@Model.Name</h3>
                     </div>
                     @using (Html.BeginForm("Edit", "ProductManage", FormMethod.Post, new { @enctype = "multipart/form-data" }))
                     {
                         <input type="text" name="ID" value="@Model.ID" hidden />
                         <div class="card-body">
-                            <span class="badge bg-success">@ViewBag.Message</span>
-                            <div class="form-group">
-                                <label>Tên</label>
-                                <input type="text" class="form-control" value="@Model.Name" required name="Name">
-                            </div>
-                            <div class="form-group">
-                                <label>Danh mục</label>
-                                <select name="CategoryID" class="form-control">
-                                    @foreach (var item in categoryies)
-                                    {
-                                        if (item.ID == Model.CategoryID)
-                                        {
-                                            <option value="@item.ID" selected>@item.Name</option>
-                                        }
-                                        else
-                                        {
-                                            <option value="@item.ID">@item.Name</option>
-                                        }
-                                    }
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label>Đơn giá</label>
-                                <input type="text" class="form-control" value="@Model.Price.Value" required name="Price">
-                            </div>
-                            <div class="form-group">
-                                <label>Số lượng</label>
-                                <input type="text" class="form-control" value="@Model.Quantity" required name="Quantity">
-                            </div>
-                            <div class="form-group">
-                                <label>Lượt xem</label>
-                                <input type="text" class="form-control" value="@Model.ViewCount" required name="ViewCount" disabled>
-                            </div>
-                            <div class="form-group">
-                                <label>Đã bán</label>
-                                <input type="text" class="form-control" value="@Model.PurchasedCount" required name="PurchasedCount" disabled>
-                            </div>
-                            <div class="form-group">
-                                <label>Hình 1</label>
-                                <img src="~/Content/images/@Model.Image1" alt="Alternate Text" style="width:200px;height:300px;border: solid 1px gray" />
-                                <label>Hình 2</label>
-                                <img src="~/Content/images/@Model.Image2" alt="Alternate Text" style="width:200px;height:300px;border: solid 1px gray" />
-                                <label>Hình 3</label>
-                                <img src="~/Content/images/@Model.Image3" alt="Alternate Text" style="width:200px;height:300px;border: solid 1px gray" />
-                            </div>
-                            <div class="form-group">
-                                <label>Chọn hình 1 mới</label>
-                                <input type="file" class="form-control" name="ImageUpload">
-                            </div>
-                            <div class="form-group">
-                                <label>Chọn hình 2 mới</label>
-                                <input type="file" class="form-control" name="ImageUpload">
-                            </div>
-                            <div class="form-group">
-                                <label>Chọn hình 3 mới</label>
-                                <input type="file" class="form-control" name="ImageUpload">
-                            </div>
-                            <div class="form-group">
-                                <label>Mô tả</label>
-                                <textarea class="form-control" required name="Description">@Model.Description</textarea>
+                            @if (!string.IsNullOrEmpty(ViewBag.Message))
+                            {
+                                <div class="alert alert-success alert-dismissible">
+                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                    <h5><i class="icon fas fa-check"></i> Thành công!</h5>
+                                    @ViewBag.Message
+                                </div>
+                            }
+
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label for="Name"><i class="fas fa-signature mr-1"></i>Tên sản phẩm</label>
+                                        <input type="text" class="form-control" id="Name" value="@Model.Name" required name="Name" placeholder="Nhập tên sản phẩm">
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="CategoryID"><i class="fas fa-tags mr-1"></i>Danh mục</label>
+                                                <select name="CategoryID" id="CategoryID" class="form-control select2" style="width: 100%;">
+                                                    @foreach (var item in categoryies)
+                                                    {
+                                                        if (item.ID == Model.CategoryID)
+                                                        {
+                                                            <option value="@item.ID" selected>@item.Name</option>
+                                                        }
+                                                        else
+                                                        {
+                                                            <option value="@item.ID">@item.Name</option>
+                                                        }
+                                                    }
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label for="Price"><i class="fas fa-tag mr-1"></i>Đơn giá</label>
+                                                <div class="input-group">
+                                                    <input type="number" min="0" step="1000" class="form-control" id="Price" value="@Model.Price.Value" required name="Price">
+                                                    <div class="input-group-append">
+                                                        <span class="input-group-text">VNĐ</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label for="Quantity"><i class="fas fa-cubes mr-1"></i>Số lượng</label>
+                                                <input type="number" min="0" class="form-control" id="Quantity" value="@Model.Quantity" required name="Quantity">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="ViewCount"><i class="fas fa-eye mr-1"></i>Lượt xem</label>
+                                                <input type="text" class="form-control" id="ViewCount" value="@Model.ViewCount" name="ViewCount" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="PurchasedCount"><i class="fas fa-shopping-cart mr-1"></i>Đã bán</label>
+                                                <input type="text" class="form-control" id="PurchasedCount" value="@Model.PurchasedCount" name="PurchasedCount" readonly>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="Description"><i class="fas fa-align-left mr-1"></i>Mô tả sản phẩm</label>
+                                        <textarea class="form-control" id="Description" required name="Description" rows="5" style="resize: vertical;">@Model.Description</textarea>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <div class="card-header bg-light">
+                                            <h3 class="card-title"><i class="fas fa-images mr-1"></i>Hình ảnh sản phẩm</h3>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row mb-3">
+                                                <div class="col-12 text-center mb-2">
+                                                    <label>Hình ảnh hiện tại</label>
+                                                </div>
+                                                <div class="col-4">
+                                                    <img src="~/Content/images/@Model.Image1" alt="Hình 1" class="img-thumbnail" style="width:100%; height:150px; object-fit:cover;">
+                                                </div>
+                                                <div class="col-4">
+                                                    <img src="~/Content/images/@Model.Image2" alt="Hình 2" class="img-thumbnail" style="width:100%; height:150px; object-fit:cover;">
+                                                </div>
+                                                <div class="col-4">
+                                                    <img src="~/Content/images/@Model.Image3" alt="Hình 3" class="img-thumbnail" style="width:100%; height:150px; object-fit:cover;">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="ImageUpload1"><i class="fas fa-image mr-1"></i>Hình 1 mới</label>
+                                                <div class="custom-file">
+                                                    <input type="file" class="custom-file-input" id="ImageUpload1" name="ImageUpload" accept="image/*">
+                                                    <label class="custom-file-label" for="ImageUpload1">Chọn file</label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="ImageUpload2"><i class="fas fa-image mr-1"></i>Hình 2 mới</label>
+                                                <div class="custom-file">
+                                                    <input type="file" class="custom-file-input" id="ImageUpload2" name="ImageUpload" accept="image/*">
+                                                    <label class="custom-file-label" for="ImageUpload2">Chọn file</label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="ImageUpload3"><i class="fas fa-image mr-1"></i>Hình 3 mới</label>
+                                                <div class="custom-file">
+                                                    <input type="file" class="custom-file-input" id="ImageUpload3" name="ImageUpload" accept="image/*">
+                                                    <label class="custom-file-label" for="ImageUpload3">Chọn file</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="card-footer">
-                            <a href="/ProductManage/" class="btn btn-default">Trở lại</a>
-                            <button type="submit" class="btn btn-primary">Lưu</button>
+                            <a href="/ProductManage/" class="btn btn-secondary">
+                                <i class="fas fa-arrow-left mr-1"></i>Trở lại
+                            </a>
+                            <button type="submit" class="btn btn-primary float-right">
+                                <i class="fas fa-save mr-1"></i>Lưu thay đổi
+                            </button>
                         </div>
                     }
                 </div>
@@ -105,3 +171,28 @@
         </div>
     </div>
 </section>
+
+<script>
+$(function () {
+    $('.custom-file-input').on('change', function() {
+        var fileName = $(this).val().split('\\').pop();
+        $(this).next('.custom-file-label').addClass("selected").html(fileName);
+    });
+
+    $('#Description').summernote({
+        height: 200,
+        toolbar: [
+            ['style', ['style']],
+            ['font', ['bold', 'italic', 'underline', 'clear']],
+            ['fontname', ['fontname']],
+            ['color', ['color']],
+            ['para', ['ul', 'ol', 'paragraph']],
+            ['table', ['table']],
+            ['insert', ['link']],
+            ['view', ['fullscreen', 'codeview', 'help']]
+        ]
+    });
+
+    $('.select2').select2();
+});
+</script>

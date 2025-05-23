@@ -18,10 +18,129 @@
     <script src="~/Content/Admin/plugins/jquery-ui/jquery-ui.min.js"></script>
     <script src="~/Content/js/notify.min.js"></script>
 </head>
+<style>
+    .main-sidebar {
+        background: linear-gradient(180deg, #343a40 0%, #212529 100%);
+    }
+
+    .brand-link {
+        background: rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .brand-link:hover {
+        background: rgba(255, 255, 255, 0.15);
+    }
+
+    .user-panel {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .user-panel .info a {
+        color: #fff;
+        font-weight: 500;
+    }
+
+    .nav-header {
+        background: rgba(255, 255, 255, 0.05);
+        color: #adb5bd;
+        font-weight: 600;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        padding: 8px 15px;
+        margin: 10px 0 5px 0;
+        border-radius: 4px;
+    }
+
+    .nav-sidebar .nav-item > .nav-link {
+        border-radius: 4px;
+        margin: 2px 8px;
+        transition: all 0.3s ease;
+    }
+
+    .nav-sidebar .nav-item > .nav-link:hover {
+        background: rgba(255, 255, 255, 0.1);
+        transform: translateX(5px);
+    }
+
+    .nav-sidebar .nav-item > .nav-link.active {
+        background: rgba(0, 123, 255, 0.2);
+        border-left: 3px solid #007bff;
+    }
+
+    .nav-treeview .nav-link {
+        padding-left: 50px;
+        font-size: 0.9rem;
+    }
+
+    .nav-treeview .nav-link:hover {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 4px;
+    }
+
+    .nav-sidebar .nav-icon {
+        width: 20px;
+        text-align: center;
+        margin-right: 10px;
+    }
+
+    .sidebar-search-form {
+        margin: 10px 15px;
+    }
+
+    .form-control-sidebar {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: #fff;
+    }
+
+    .form-control-sidebar:focus {
+        background: rgba(255, 255, 255, 0.15);
+        border-color: #007bff;
+        color: #fff;
+    }
+
+    .form-control-sidebar::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    .btn-sidebar {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: #fff;
+    }
+
+    .btn-sidebar:hover {
+        background: rgba(255, 255, 255, 0.2);
+        color: #fff;
+    }
+
+    .badge {
+        font-size: 0.7rem;
+        padding: 3px 6px;
+    }
+    .sidebar::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .sidebar::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .sidebar::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 3px;
+    }
+
+    .sidebar::-webkit-scrollbar-thumb:hover {
+        background: rgba(255, 255, 255, 0.5);
+    }
+</style>
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
         <div class="preloader flex-column justify-content-center align-items-center">
-            <img class="animation__shake" src="~/Content/Admin/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+            <img class="animation__shake" src="~/Content/images/logo.jpg" alt="AdminLTELogo" height="60" width="60">
         </div>
         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
             <ul class="navbar-nav">
@@ -62,78 +181,88 @@
                         CosmeticsShop.Models.User user = Session["User"] as CosmeticsShop.Models.User;
                         if (user != null)
                         {
-                            <div class="info" style="text-align:center">
+                            <div class="image">
+                                <img src="~/Content/images/Avatar/admin.jpg" class="img-circle" alt="User Avatar">
+                            </div>
+                            <div class="info">
+                                <a href="#" class="d-block">@user.Name</a>
+                                <span class="badge badge-success">Admin</span>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="info" style="text-align:center; width: 100%;">
                                 <a href="#" class="d-block">Hệ quản trị ADMIN</a>
                             </div>
                         }
                     }
                 </div>
+
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
                         <li class="nav-item">
                             <a href="/Admin/" class="nav-link">
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <i class="nav-icon fas fa-tachometer-alt text-info"></i>
                                 <p>
                                     Tổng quan
                                 </p>
                             </a>
                         </li>
+
+                        <li class="nav-header">QUẢN LÝ HỆ THỐNG</li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-copy"></i>
+                                <i class="nav-icon fas fa-cogs text-warning"></i>
                                 <p>
-                                    Quản lý
+                                    Quản lý sản phẩm
                                     <i class="fas fa-angle-left right"></i>
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
                                     <a href="/ProductManage/Index" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
+                                        <i class="fas fa-box nav-icon text-primary"></i>
                                         <p>Sản phẩm</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="/CategoryManage/Index" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
+                                        <i class="fas fa-tags nav-icon text-success"></i>
                                         <p>Danh mục</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="/OrderManage/" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
+                                        <i class="fas fa-shopping-cart nav-icon text-danger"></i>
                                         <p>Đơn đặt hàng</p>
                                     </a>
                                 </li>
                             </ul>
                         </li>
+
+                        <li class="nav-header">KHÁCH HÀNG</li>
                         <li class="nav-item">
                             <a href="/KhachHangManage/" class="nav-link">
-                                <i class="nav-icon fas fa-envelope"></i>
+                                <i class="nav-icon fas fa-users text-primary"></i>
                                 <p>
-                                    Khách hàng
+                                    Quản lý khách hàng
                                 </p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="/Chat/" class="nav-link">
-                                <i class="nav-icon fas fa-envelope"></i>
+                                <i class="nav-icon fas fa-comments text-success"></i>
                                 <p>
                                     Chat với KH
                                 </p>
                             </a>
                         </li>
+                    
+                        <li class="nav-header">KHÁC</li>
                         <li class="nav-item">
-                            <a href="@Url.Action("Index","Statistic",new { from=DateTime.Now,to=DateTime.Now})" class="nav-link">
-                                <i class="nav-icon fas fa-chart-area"></i>
-                                <p>
-                                    Thống kê
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/Home/SignOut" class="nav-link">
-                                <i class="nav-icon fas fa-arrow-alt-circle-right"></i>
+                            <a href="/Home/SignOut" class="nav-link" onclick="return confirm('Bạn có chắc chắn muốn đăng xuất?')">
+                                <i class="nav-icon fas fa-sign-out-alt text-danger"></i>
                                 <p>
                                     Đăng xuất
                                 </p>
@@ -192,7 +321,7 @@
                             $noti.append(
                                 '<a href = "/Chat/Chating?WithUserID=' + model.FromUserID + '&MessageID=' + model.ID + '" class= "dropdown-item" id="' + model.FromUserID + '">' +
                                 '<div class="media">' +
-                                '<img src="/Content/images/' + model.FromUserAvatar + '" alt="User Avatar" class="img-size-50 mr-3 img-circle">' +
+                                '<img src="/Content/images/Avatar/client.jpg' + '" alt="User Avatar" class="img-size-50 mr-3 img-circle">' +
                                 '<div class="media-body">' +
                                 '<h3 class="dropdown-item-title">'
                                 + model.FromUserName +

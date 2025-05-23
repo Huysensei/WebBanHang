@@ -41,5 +41,27 @@ namespace CosmeticsShop.Controllers
             }
             return View(categories);
         }
+        [HttpPost]
+        public ActionResult Delete(int id)
+        {
+            if (!CheckRole("Admin"))
+            {
+                return RedirectToAction("Index", "Admin");
+            }
+
+            var user = db.Users.Find(id);
+            if (user != null && user.UserTypeID == 2) 
+            {
+                db.Users.Remove(user);
+                db.SaveChanges();
+                TempData["Success"] = "Đã xóa khách hàng thành công!";
+            }
+            else
+            {
+                TempData["Error"] = "Không tìm thấy người dùng hoặc không phải khách hàng!";
+            }
+
+            return RedirectToAction("Index");
+        }
     }
 }

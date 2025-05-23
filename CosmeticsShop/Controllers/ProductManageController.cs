@@ -63,6 +63,7 @@ namespace CosmeticsShop.Controllers
             return View(product);
         }
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult Edit(Product product, HttpPostedFileBase[] ImageUpload)
         {
             Product productUpdate = db.Products.Find(product.ID);
@@ -120,6 +121,7 @@ namespace CosmeticsShop.Controllers
             return View();
         }
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult Add(Product product, HttpPostedFileBase[] ImageUpload)
         {
             for (int i = 0; i < ImageUpload.Length; i++)

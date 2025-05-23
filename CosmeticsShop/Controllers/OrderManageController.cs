@@ -62,5 +62,23 @@ namespace CosmeticsShop.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+        public ActionResult Delete(int ID)
+        {
+            if (!CheckRole("Admin"))
+            {
+                return RedirectToAction("Index", "Admin");
+            }
+            var orderDetails = db.OrderDetails.Where(od => od.OrderID == ID).ToList();
+            db.OrderDetails.RemoveRange(orderDetails);
+
+            Order order = db.Orders.Find(ID);
+            if (order != null)
+            {
+                db.Orders.Remove(order);
+                db.SaveChanges();
+            }
+
+            return RedirectToAction("Index");
+        }
     }
 }

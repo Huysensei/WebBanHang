@@ -209,7 +209,7 @@
                             msgerchat.append(
                                 '<div class="msg left-msg">' +
                                 '<div class="msg-img"' +
-                                'style="background-image: url(/Content/images/' + model.FromAvatarUser + ')"></div>' +
+                                'style="background-image: url(/Content/images/Avatar/client.jpg)"></div>' +
                                 ' <div class="msg-bubble">' +
                                 '<div class="msg-info">' +
                                 '<div class="msg-info-name">' + model.FromUserName + '</div>' +
@@ -223,7 +223,7 @@
                             msgerchat.append(
                                 '<div class="msg right-msg">' +
                                 '<div class="msg-img"' +
-                                'style="background-image: url(/Content/images/' + model.FromAvatarUser + ')"></div>' +
+                                'style="background-image: url(/Content/images/Avatar/client.jpg)"></div>' +
                                 ' <div class="msg-bubble">' +
                                 '<div class="msg-info">' +
                                 '<div class="msg-info-name">' + model.FromUserName + '</div>' +
@@ -244,18 +244,25 @@
             }
         })
     }
-    $('#btn-send').click(function send() {
+    $('#btn-send').click(function (event) {
         event.preventDefault();
+
         var input = $('.msger-input').val();
         if (input == "") {
             $.notify("Vui lòng nhập vào tin nhắn!", "warn");
             return false;
         }
+
         var fromId = $('#UserID').val();
-        var content = $('.msger-input').val();
+        var content = input;
+
         $.ajax({
             url: location.origin + "/Chat/Send",
-            data: { FromUserID: fromId, ToUserID: new URLSearchParams(window.location.search).get('WithUserID'), Content: content },
+            data: {
+                FromUserID: fromId,
+                ToUserID: new URLSearchParams(window.location.search).get('WithUserID'),
+                Content: content
+            },
             type: 'POST',
             dataType: 'JSON',
             success: function (data) {
@@ -265,18 +272,15 @@
                     $(".msger-input").prop("disabled", false);
                     $.notify("Đã gửi", "success");
                     $('.msger-input').val("");
-                    $(".chatbox__body").animate({ scrollTop: 2000000 });
-                    $('.msger-chat').animate({
-                        scrollTop: $("#end").offset().top
-                    }, 2000);
                 } else {
                     $.notify("Có lỗi xảy ra!", "error");
-                    return;
                 }
             }
-        })
+        });
+
         $("#btn-send").hide();
         $(".msger-input").prop("disabled", true);
         $(".loading-send").show();
-    })
+    });
+
 </script>

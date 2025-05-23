@@ -1,6 +1,5 @@
-﻿
-@{
-    ViewBag.Title = "Thêm mới";
+﻿@{
+    ViewBag.Title = "Thêm sản phẩm mới";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 @{
@@ -10,11 +9,13 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1 class="m-0">Thêm mới</h1>
+                <h1 class="m-0 text-dark"><i class="fas fa-plus-circle mr-2"></i>Thêm sản phẩm mới</h1>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="#">Thêm mới</a></li>
+                    <li class="breadcrumb-item"><a href="/Admin/Dashboard">Trang chủ</a></li>
+                    <li class="breadcrumb-item"><a href="/ProductManage">Quản lý sản phẩm</a></li>
+                    <li class="breadcrumb-item active">Thêm mới</li>
                 </ol>
             </div>
         </div>
@@ -25,51 +26,112 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <div class="card card-primary">
+                <div class="card card-primary card-outline">
+                    <div class="card-header">
+                        <h3 class="card-title"><i class="fas fa-box-open mr-1"></i>Thông tin sản phẩm</h3>
+                    </div>
                     @using (Html.BeginForm("Add", "ProductManage", FormMethod.Post, new { @enctype = "multipart/form-data" }))
                     {
                         <div class="card-body">
-                            <div class="form-group">
-                                <label>Tên</label>
-                                <input type="text" class="form-control" required name="Name">
-                            </div>
-                            <div class="form-group">
-                                <label>Danh mục</label>
-                                <select name="CategoryID" class="form-control">
-                                    @foreach (var item in categoryies)
-                                    {
-                                        <option value="@item.ID">@item.Name</option>
-                                    }
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label>Đơn giá</label>
-                                <input type="text" class="form-control" required name="Price">
-                            </div>
-                            <div class="form-group">
-                                <label>Số lượng</label>
-                                <input type="text" class="form-control" required name="Quantity">
-                            </div>
-                            <div class="form-group">
-                                <label>Chọn hình 1 (*)</label>
-                                <input type="file" class="form-control" name="ImageUpload" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Chọn hình 2</label>
-                                <input type="file" class="form-control" name="ImageUpload">
-                            </div>
-                            <div class="form-group">
-                                <label>Chọn hình 3</label>
-                                <input type="file" class="form-control" name="ImageUpload">
-                            </div>
-                            <div class="form-group">
-                                <label>Mô tả</label>
-                                <textarea class="form-control" required name="Description"></textarea>
+                            @if (!string.IsNullOrEmpty(ViewBag.Message))
+                            {
+                                <div class="alert alert-success alert-dismissible">
+                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                    <h5><i class="icon fas fa-check"></i> Thành công!</h5>
+                                    @ViewBag.Message
+                                </div>
+                            }
+
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label for="Name"><i class="fas fa-signature mr-1"></i>Tên sản phẩm</label>
+                                        <input type="text" class="form-control" id="Name" required name="Name" placeholder="Nhập tên sản phẩm">
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="CategoryID"><i class="fas fa-tags mr-1"></i>Danh mục</label>
+                                                <select name="CategoryID" id="CategoryID" class="form-control select2" style="width: 100%;">
+                                                    @foreach (var item in categoryies)
+                                                    {
+                                                        <option value="@item.ID">@item.Name</option>
+                                                    }
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label for="Price"><i class="fas fa-tag mr-1"></i>Đơn giá</label>
+                                                <div class="input-group">
+                                                    <input type="number" min="0" step="1000" class="form-control" id="Price" required name="Price" placeholder="0">
+                                                    <div class="input-group-append">
+                                                        <span class="input-group-text">VNĐ</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label for="Quantity"><i class="fas fa-cubes mr-1"></i>Số lượng</label>
+                                                <input type="number" min="0" class="form-control" id="Quantity" required name="Quantity" placeholder="0">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="Description"><i class="fas fa-align-left mr-1"></i>Mô tả sản phẩm</label>
+                                        <textarea class="form-control" id="Description" required name="Description" rows="5" placeholder="Nhập mô tả chi tiết về sản phẩm..." style="resize: vertical;"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <div class="card-header bg-light">
+                                            <h3 class="card-title"><i class="fas fa-images mr-1"></i>Hình ảnh sản phẩm</h3>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="callout callout-info">
+                                                <p><i class="fas fa-info-circle mr-1"></i> Hình ảnh nên có kích thước tương đương và có độ phân giải tốt.</p>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="ImageUpload1"><i class="fas fa-image mr-1"></i>Hình 1 <span class="text-danger">*</span></label>
+                                                <div class="custom-file">
+                                                    <input type="file" class="custom-file-input" id="ImageUpload1" name="ImageUpload" accept="image/*" required>
+                                                    <label class="custom-file-label" for="ImageUpload1">Chọn file</label>
+                                                </div>
+                                                <small class="form-text text-muted">Hình ảnh chính của sản phẩm (bắt buộc)</small>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="ImageUpload2"><i class="fas fa-image mr-1"></i>Hình 2</label>
+                                                <div class="custom-file">
+                                                    <input type="file" class="custom-file-input" id="ImageUpload2" name="ImageUpload" accept="image/*">
+                                                    <label class="custom-file-label" for="ImageUpload2">Chọn file</label>
+                                                </div>
+                                                <small class="form-text text-muted">Hình ảnh bổ sung (không bắt buộc)</small>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="ImageUpload3"><i class="fas fa-image mr-1"></i>Hình 3</label>
+                                                <div class="custom-file">
+                                                    <input type="file" class="custom-file-input" id="ImageUpload3" name="ImageUpload" accept="image/*">
+                                                    <label class="custom-file-label" for="ImageUpload3">Chọn file</label>
+                                                </div>
+                                                <small class="form-text text-muted">Hình ảnh bổ sung (không bắt buộc)</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="card-footer">
-                            <a href="/ProductManage/" class="btn btn-default">Trở lại</a>
-                            <button type="submit" class="btn btn-primary">Lưu</button>
+                            <a href="/ProductManage/" class="btn btn-secondary">
+                                <i class="fas fa-arrow-left mr-1"></i>Trở lại
+                            </a>
+                            <button type="submit" class="btn btn-success float-right">
+                                <i class="fas fa-plus-circle mr-1"></i>Thêm sản phẩm
+                            </button>
                         </div>
                     }
                 </div>
@@ -77,3 +139,54 @@
         </div>
     </div>
 </section>
+
+<script>
+$(function () {
+    $('.custom-file-input').on('change', function() {
+        var fileName = $(this).val().split('\\').pop();
+        $(this).next('.custom-file-label').addClass("selected").html(fileName);
+
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+            }
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+
+    $('#Description').summernote({
+        height: 200,
+        placeholder: 'Nhập mô tả chi tiết về sản phẩm...',
+        toolbar: [
+            ['style', ['style']],
+            ['font', ['bold', 'italic', 'underline', 'clear']],
+            ['fontname', ['fontname']],
+            ['color', ['color']],
+            ['para', ['ul', 'ol', 'paragraph']],
+            ['table', ['table']],
+            ['insert', ['link']],
+            ['view', ['fullscreen', 'codeview', 'help']]
+        ]
+    });
+
+    $('.select2').select2();
+});
+</script>
+
+<style>
+    .image-preview-container {
+        width: 100%;
+        height: 200px;
+        border: 2px dashed #ddd;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .image-preview-placeholder {
+        text-align: center;
+        color: #aaa;
+    }
+</style>

@@ -37,7 +37,7 @@ namespace CosmeticsShop.Controllers
             }
             string urlBase = Request.Url.GetLeftPart(UriPartial.Authority) + Url.Content("~");
             ViewBag.Email = "Truy cập vào Email để xác minh tài khoản: " + user.Email;
-            SentMail("Mã xác minh tài khoản", user.Email,"duongnm110198@gmail.com","xuum skth fmxr vtpl", "Xác minh nhanh bằng cách click vào link: " + urlBase + "User/ConfirmEmailLink/" + ID + "?Captcha=" + user.Captcha + "</p>");
+            SentMail("Mã xác minh tài khoản", user.Email,"pnh5523@gmail.com", "bcjc qtgx dlft vvpm", "Xác minh nhanh bằng cách click vào link: " + urlBase + "User/ConfirmEmailLink/" + ID + "?Captcha=" + user.Captcha + "</p>");
             return View();
         }
         [HttpGet]
@@ -151,9 +151,29 @@ namespace CosmeticsShop.Controllers
             {
                 var user = db.Users.Find(Id);
                 user.Password = PasswordNew;
+                db.SaveChanges();
                 return true;
             }
         }
+        public ActionResult Login(string email, string password)
+        {
+            var user = db.Users.SingleOrDefault(u => u.Email == email && u.Password == password);
+            if (user == null)
+            {
+                ViewBag.Error = "Tài khoản hoặc mật khẩu không đúng";
+                return View();
+            }
+
+            if (user.IsConfirm != true)
+            {
+                ViewBag.Error = "Tài khoản chưa được xác minh qua email";
+                return View();
+            }
+
+            Session["User"] = user;
+            return RedirectToAction("Index", "Home");
+        }
+
     }
     public class Profile
     {

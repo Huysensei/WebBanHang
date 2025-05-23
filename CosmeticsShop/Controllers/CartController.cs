@@ -12,52 +12,94 @@ namespace CosmeticsShop.Controllers
     public class CartController : Controller
     {
         ShoppingEntities db = new ShoppingEntities();
+
         [HttpPost]
-        public JsonResult AddItem(int ProductID)
+        public JsonResult AddItem(int ProductID, int Quantity = 1)
         {
+            // Kiểm tra số lượng hợp lệ
+            if (Quantity <= 0)
+            {
+                return Json(new { status = false }, JsonRequestBehavior.AllowGet);
+            }
+
             Product product = db.Products.SingleOrDefault(x => x.ID == ProductID);
+
+            if (product == null || product.Quantity <= 0)
+            {
+                return Json(new { status = false }, JsonRequestBehavior.AllowGet);
+            }
+
             if (Session["Cart"] == null)
             {
                 Session["Cart"] = new List<ItemCart>();
             }
+
             List<ItemCart> itemCarts = Session["Cart"] as List<ItemCart>;
             ItemCart check = itemCarts.FirstOrDefault(x => x.ProductID == ProductID);
-            if (itemCarts.Count > 0 && check!= null && product.Quantity <= check.Quantity)
-            {
-                return Json(new { status = false }, JsonRequestBehavior.AllowGet);
-            }
+
             if (check != null)
             {
+                // Kiểm tra tổng số lượng sau khi thêm
+                int newQuantity = check.Quantity + Quantity;
+                if (product.Quantity < newQuantity)
+                {
+                    return Json(new { status = false }, JsonRequestBehavior.AllowGet);
+                }
+
                 for (int i = 0; i < itemCarts.Count; i++)
                 {
                     if (itemCarts[i].ProductID == ProductID)
                     {
-                        itemCarts[i].Quantity += 1;
+                        itemCarts[i].Quantity += Quantity;
+                        break;
                     }
                 }
             }
             else
             {
-                itemCarts.Add(new ItemCart() { ProductID = product.ID, ProductName = product.Name, ProductPrice = product.Price.Value, ProductImage = product.Image1, Quantity = 1 });
+                if (product.Quantity < Quantity)
+                {
+                    return Json(new { status = false }, JsonRequestBehavior.AllowGet);
+                }
+
+                itemCarts.Add(new ItemCart()
+                {
+                    ProductID = product.ID,
+                    ProductName = product.Name,
+                    ProductPrice = product.Price.Value,
+                    ProductImage = product.Image1,
+                    Quantity = Quantity 
+                });
             }
+
             Session["Cart"] = itemCarts;
             return Json(new { status = true }, JsonRequestBehavior.AllowGet);
         }
+
         [HttpGet]
         public JsonResult GetTotalCart()
         {
             List<ItemCart> itemCarts = Session["Cart"] as List<ItemCart>;
+            if (itemCarts == null || itemCarts.Count == 0)
+            {
+                return Json(new { TotalPrice = "0", TotalQuantity = 0 }, JsonRequestBehavior.AllowGet);
+            }
             return Json(new { TotalPrice = itemCarts.Sum(x => x.ProductPrice * x.Quantity).ToString("#,##"), TotalQuantity = itemCarts.Sum(x => x.Quantity) }, JsonRequestBehavior.AllowGet);
         }
+
         [HttpPost]
         public JsonResult UpdateQuantity(int ProductID, int Quantity)
         {
             List<ItemCart> itemCarts = Session["Cart"] as List<ItemCart>;
+            if (itemCarts == null)
+            {
+                return Json(new { update = false }, JsonRequestBehavior.AllowGet);
+            }
+
             if (Quantity > 0)
             {
-                // Kiểm tra số lượng tồn
                 Product product = db.Products.SingleOrDefault(x => x.ID == ProductID);
-                if (itemCarts.Count > 0 && product.Quantity <= Quantity)
+                if (itemCarts.Count > 0 && product != null && product.Quantity < Quantity)
                 {
                     return Json(new { update = false }, JsonRequestBehavior.AllowGet);
                 }
@@ -86,22 +128,34 @@ namespace CosmeticsShop.Controllers
             }
             return Json(new { remove = true }, JsonRequestBehavior.AllowGet);
         }
+
         [HttpGet]
         public JsonResult GetSubTotal(int ProductID = 1)
         {
             List<ItemCart> itemCarts = Session["Cart"] as List<ItemCart>;
+            if (itemCarts == null)
+            {
+                return Json(new { SubTotal = "0" }, JsonRequestBehavior.AllowGet);
+            }
             return Json(new { SubTotal = itemCarts.Where(x => x.ProductID == ProductID).Sum(x => x.ProductPrice * x.Quantity).ToString("#,##") }, JsonRequestBehavior.AllowGet);
         }
+
         [HttpGet]
         public JsonResult GetTotal()
         {
             List<ItemCart> itemCarts = Session["Cart"] as List<ItemCart>;
+            if (itemCarts == null)
+            {
+                return Json(new { Total = "0" }, JsonRequestBehavior.AllowGet);
+            }
             return Json(new { Total = itemCarts.Sum(x => x.ProductPrice * x.Quantity).ToString("#,##") }, JsonRequestBehavior.AllowGet);
         }
+
         public ActionResult Checkout()
         {
             return View();
         }
+
         [HttpPost]
         public ActionResult AddOrder(string payment = "")
         {
@@ -142,6 +196,7 @@ namespace CosmeticsShop.Controllers
             Session.Remove("OrderID");
             return RedirectToAction("Message", new { mess = "Đặt hàng thành công" });
         }
+
         public void SentMail(string Title, string ToEmail, string FromEmail, string Password, string Content)
         {
             MailMessage mail = new MailMessage();
@@ -158,11 +213,13 @@ namespace CosmeticsShop.Controllers
             smtp.EnableSsl = true;
             smtp.Send(mail);
         }
+
         public ActionResult Message(string mess)
         {
             ViewBag.Message = mess;
             return View();
         }
+
         [HttpPost]
         public JsonResult RemoveItem(int ProductID)
         {

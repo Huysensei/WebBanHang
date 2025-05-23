@@ -1,4 +1,5 @@
-﻿using CosmeticsShop.Models;
+﻿using CosmeticsShop.Hubs;
+using CosmeticsShop.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity.Migrations;
@@ -156,6 +157,8 @@ namespace CosmeticsShop.Controllers
 
                 db.Messages.Add(message);
                 db.SaveChanges();
+                var context = Microsoft.AspNet.SignalR.GlobalHost.ConnectionManager.GetHubContext<ChatHubs>();
+                context.Clients.All.displayMessageChating();
                 return Json(new
                 {
                     status = true

@@ -2,23 +2,19 @@
     ViewBag.Title = "Thêm mới danh mục";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
-
 <div class="content-header">
     <div class="container-fluid">
-        <div class="row mb-2">
+        <div class="row mb-3">
             <div class="col-sm-6">
-                <h1 class="m-0">Thêm mới</h1>
-
-                @if (ViewBag.Message != null)
-                {
-                    <p style="margin-top: 5px; color: green; font-weight: bold;">
-                        @ViewBag.Message
-                    </p>
-                }
+                <h1 class="m-0 text-primary">
+                    <i class="fas fa-plus-circle mr-2"></i>Thêm mới danh mục
+                </h1>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="#">Thêm mới</a></li>
+                    <li class="breadcrumb-item"><a href="/Admin">Trang chủ</a></li>
+                    <li class="breadcrumb-item"><a href="/CategoryManage">Danh mục</a></li>
+                    <li class="breadcrumb-item active">Thêm mới</li>
                 </ol>
             </div>
         </div>
@@ -29,18 +25,49 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <div class="card card-primary">
-                    @using (Html.BeginForm("Add", "CategoryManage", FormMethod.Post))
+                <div class="card card-success card-outline shadow-sm">
+                    <div class="card-header">
+                        <h3 class="card-title font-weight-bold">
+                            <i class="fas fa-plus-circle mr-1"></i>Tạo danh mục mới
+                        </h3>
+                    </div>
+
+                    @using (Html.BeginForm("Add", "CategoryManage", FormMethod.Post, new { @class = "needs-validation", novalidate = "novalidate" }))
                     {
                         <div class="card-body">
+                            @if (!string.IsNullOrEmpty(ViewBag.Message))
+                            {
+                                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                    <i class="fas fa-check-circle mr-2"></i>@ViewBag.Message
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            }
+
                             <div class="form-group">
-                                <label>Tên</label>
-                                <input type="text" class="form-control" required name="Name" />
+                                <label for="categoryName">
+                                    <i class="fas fa-tag mr-1"></i>Tên danh mục <span class="text-danger">*</span>
+                                </label>
+                                <input type="text" class="form-control" id="categoryName" required name="Name" placeholder="Nhập tên danh mục...">
+                                <div class="invalid-feedback">
+                                    Vui lòng nhập tên danh mục
+                                </div>
+                                <small class="form-text text-muted">
+                                    <i class="fas fa-info-circle mr-1"></i>Tên danh mục sẽ được hiển thị trên trang web và sử dụng để phân loại sản phẩm.
+                                </small>
                             </div>
                         </div>
-                        <div class="card-footer">
-                            <a href="/CategoryManage/" class="btn btn-default">Trở lại</a>
-                            <button type="submit" class="btn btn-primary">Lưu</button>
+
+                        <div class="card-footer bg-light">
+                            <div class="d-flex justify-content-between">
+                                <a href="/CategoryManage/" class="btn btn-secondary">
+                                    <i class="fas fa-arrow-left mr-1"></i>Quay lại danh sách
+                                </a>
+                                <button type="submit" class="btn btn-success">
+                                    <i class="fas fa-plus-circle mr-1"></i>Tạo danh mục
+                                </button>
+                            </div>
                         </div>
                     }
                 </div>
@@ -48,3 +75,29 @@
         </div>
     </div>
 </section>
+
+<script>
+    $(document).ready(function () {
+        // Form validation
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                var forms = document.getElementsByClassName('needs-validation');
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+
+        // Auto hide alert after 5 seconds
+        setTimeout(function () {
+            $(".alert").alert('close');
+        }, 5000);
+    });
+</script>

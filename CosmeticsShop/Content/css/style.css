@@ -32,7 +32,7 @@ h1, h2, h3, h4, h5, h6, label, p {
 }
 /*----*/
 .logo span {
-    color: #fa03bb;
+    color: gold;
 }
 
 .header-top {
@@ -289,7 +289,7 @@ ul.nav-list.list-inline li {
 
     .tes h2 {
         font-size: 4em;
-        color: #fa03bb;
+        color: gold;
         margin: 0;
         font-family: 'Roboto-Regular', cursive;
         font-weight: 700;
@@ -297,7 +297,7 @@ ul.nav-list.list-inline li {
 
     .tes p {
         font-size: 2em;
-        color: #fa03bb;
+        color: gold;
         margin: 0.5em;
         text-align: right;
     }
@@ -332,14 +332,14 @@ ul.nav-list.list-inline li {
     }
 
 .world h6 {
-    color: #fa03bb;
+    color: gold;
     font-size: 1.2em;
     margin: 0;
     font-family: 'OleoScript-Regular';
 }
 
 .world p {
-    color: #fa03bb;
+    color: gold;
     font-size: 0.9em;
     margin: 0;
 }
@@ -350,7 +350,7 @@ ul.nav-list.list-inline li {
 }
 
 i.glyphicon.glyphicon-search {
-    color: #fa03bb;
+    color: gold;
     font-size: 1em;
 }
 
@@ -469,7 +469,7 @@ a.item_add {
 }
 
 .callbacks_here a:after {
-    background: #fa03bb;
+    background: gold;
 }
 
 .callbacks_tabs a {
@@ -516,7 +516,7 @@ ul.callbacks_tabs.callbacks1_tabs {
 }
 
     .col-md1 h3 a {
-        color: #fa03bb;
+        color: gold;
         text-decoration: none;
         font-family: 'Roboto-Regular', cursive;
         font-weight: 700;
@@ -558,7 +558,7 @@ ul.callbacks_tabs.callbacks1_tabs {
 }
 
     .col-md1:hover .price a {
-        background-color: #fa03bb;
+        background-color: gold;
         transition: 0.5s all;
         -webkit-transition: 0.5s all;
         -o-transition: 0.5s all;
@@ -666,7 +666,7 @@ ul.callbacks_tabs.callbacks1_tabs {
 
 .top-footer1 h3 {
     font-size: 2em;
-    color: #fa03bb;
+    color: gold;
     margin: 0 0 0.5em;
     font-family: 'Roboto-Regular', cursive;
     font-weight: 700;
@@ -674,7 +674,7 @@ ul.callbacks_tabs.callbacks1_tabs {
 
 .top-footer h3 {
     font-size: 2em;
-    color: #fa03bb;
+    color: gold;
     margin: 0 0 0.5em;
     font-family: 'Roboto-Regular', cursive;
     font-weight: 700;
@@ -702,7 +702,7 @@ ul.callbacks_tabs.callbacks1_tabs {
 }
 
     .top-footer1 input[type="submit"]:hover {
-        background-color: #fa03bb;
+        background-color: gold;
     }
 
 .footer {
@@ -715,7 +715,7 @@ ul.callbacks_tabs.callbacks1_tabs {
 
 .footer-bottom-cate h6 {
     font-size: 1.6em;
-    color: #fa03bb;
+    color: gold;
     margin: 0 0 1em;
     font-family: 'Roboto-Regular', cursive;
     font-weight: 700;
@@ -748,7 +748,7 @@ ul.callbacks_tabs.callbacks1_tabs {
 }
 
     .cate-bottom ul li.phone {
-        color: #fa03bb;
+        color: gold;
         padding: 1em 0 0em;
     }
 
@@ -761,7 +761,7 @@ p.footer-class {
 
     p.footer-class a {
         text-decoration: none;
-        color: #fa03bb;
+        color: gold;
     }
 
         p.footer-class a:hover {
@@ -790,7 +790,7 @@ p.footer-class {
 
     .contact h3 {
         font-size: 3em;
-        color: #fa03bb;
+        color: gold;
         margin: 0 0px 1em;
         text-align: center;
         font-family: 'Roboto-Regular', cursive;
@@ -849,7 +849,7 @@ p.footer-class {
 }
 
     .contact-form input[type="submit"]:hover {
-        background: #fa03bb;
+        background: gold;
     }
 
 .address-grid i {
@@ -877,11 +877,11 @@ p.footer-class {
         }
 
             .address1 p a:hover {
-                color: #fa03bb;
+                color: gold;
             }
 
 .address-more h2 {
-    color: #fa03bb;
+    color: gold;
     font-size: 2em;
     margin: 0 15px 0.7em;
     font-family: 'Roboto-Regular', cursive;
@@ -902,7 +902,7 @@ p.footer-class {
 .breadcrumb1 li span {
     left: 0em;
     padding-right: 1em;
-    color: #fa03bb;
+    color: gold;
 }
 
 .breadcrumbs {
@@ -916,7 +916,7 @@ p.footer-class {
 }
 
 .breadcrumb1 li a {
-    color: #fa03bb;
+    color: gold;
     text-decoration: none;
 }
 
@@ -930,7 +930,7 @@ p.footer-class {
 }
 /*--login--*/
 .account h2 {
-    color: #fa03bb;
+    color: gold;
     font-size: 3em;
     margin: 0 0 1em;
     text-align: center;
@@ -939,7 +939,7 @@ p.footer-class {
 }
 
 .login-left h4 {
-    color: #fa03bb;
+    color: gold;
     font-size: 1.3em;
 }
 
@@ -966,7 +966,7 @@ p.footer-class {
 }
 
     .acount-btn:hover, .login-right input[type="submit"]:hover {
-        background: #fa03bb;
+        background: gold;
         text-decoration: none;
         color: #fff;
     }
@@ -988,7 +988,7 @@ p.footer-class {
 
 .login-right input[type="text"] {
     border: 1px solid #bbb;
-    outline-color: #fa03bb;
+    outline-color: gold;
     width: 96%;
     font-size: 0.9em;
     padding: 10px;
@@ -997,7 +997,7 @@ p.footer-class {
 
 .login-right input[type="password"] {
     border: 1px solid #bbb;
-    outline-color: #fa03bb;
+    outline-color: gold;
     width: 96%;
     font-size: 0.9em;
     padding: 10px;
@@ -1073,7 +1073,7 @@ ul.social {
 }
 /*--register--*/
 .register h2 {
-    color: #fa03bb;
+    color: gold;
     font-size: 3em;
     margin: 0 0 1em;
     text-align: center;
@@ -1090,7 +1090,7 @@ ul.social {
 
 .register-top-grid input[type="text"], .register-bottom-grid input[type="password"] {
     border: 1px solid #EEE;
-    outline-color: #fa03bb;
+    outline-color: gold;
     width: 100%;
     font-size: 1em;
     padding: 0.5em;
@@ -1099,7 +1099,7 @@ ul.social {
 
 .register-bottom-grid input[type="password"] {
     border: 1px solid #EEE;
-    outline-color: #fa03bb;
+    outline-color: gold;
     width: 100%;
     font-size: 1em;
     padding: 0.5em;
@@ -1145,7 +1145,7 @@ ul.social {
     width: 20px;
     height: 20px;
     outline: none;
-    border: 2px solid #fa03bb;
+    border: 2px solid gold;
 }
 
 .checkbox input + i:after {
@@ -1187,7 +1187,7 @@ ul.social {
 }
 
     .register-but form input[type="submit"] {
-        background: #fa03bb;
+        background: gold;
         color: #FFF;
         font-size: 1em;
         padding: 0.4em 1em;
@@ -1213,7 +1213,7 @@ ul.social {
 }
 /*--product--*/
 .products h2 {
-    color: #fa03bb;
+    color: gold;
     font-size: 3em;
     text-align: center;
     margin: 0 0 1em;
@@ -1226,7 +1226,7 @@ ul.social {
 }
 /*--menu-drop--*/
 h3.cate {
-    color: #fa03bb;
+    color: gold;
     font-size: 1.5em;
     font-family: 'Roboto-Regular', cursive;
     font-weight: 700;
@@ -1310,7 +1310,7 @@ span.price-in1 {
     font-size: 1.3em;
     padding: 0.3em 0 0;
     display: block;
-    color: #fa03bb;
+    color: gold;
 }
 
 .product-go {
@@ -1362,7 +1362,7 @@ span.price-in1 {
 /*--single--*/
 .single-para h2 {
     font-size: 1.5em;
-    color: #fa03bb;
+    color: gold;
     line-height: 1.5em;
     font-family: 'Roboto-Regular', cursive;
     font-weight: 700;
@@ -1371,7 +1371,7 @@ span.price-in1 {
 label.add-to {
     display: block;
     font-size: 2em;
-    color: #fa03bb;
+    color: gold;
 }
 
 .single-para p {
@@ -1393,7 +1393,7 @@ a.cart {
 }
 
     a.cart:hover {
-        background: #fa03bb;
+        background: gold;
     }
 /*----*/
 .star-on {
@@ -1424,7 +1424,7 @@ a.cart {
 }
 
     .star-on a:hover {
-        color: #fa03bb;
+        color: gold;
     }
 
 .single-bottom h4 {
@@ -1526,7 +1526,7 @@ a.at-in {
 
 .check-out h2 {
     font-size: 3em;
-    color: #fa03bb;
+    color: gold;
     margin: 0 0px 1em;
     text-align: center;
 }
@@ -1544,7 +1544,7 @@ a.to-buy {
 }
 
     a.to-buy:hover {
-        background: #fa03bb;
+        background: gold;
     }
 /*--//checkout--*/
 /*-- content --*/
@@ -1843,7 +1843,7 @@ a.to-buy {
 
 .info-content h4 {
     font-size: 35px;
-    color: #fa03bb;
+    color: gold;
     text-transform: uppercase;
 }
 /*-- //content --*/
@@ -2257,7 +2257,7 @@ a.to-buy {
         width: 22px;
         height: 3px;
         border-radius: 1px;
-        background-color: #fa03bb;
+        background-color: gold;
     }
 
     .nav-list > li {

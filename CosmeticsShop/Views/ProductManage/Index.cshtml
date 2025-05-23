@@ -1,104 +1,208 @@
 ﻿@model List<CosmeticsShop.Models.Product>
 @{
-    ViewBag.Title = "Danh sách sản phẩm";
+    ViewBag.Title = "Quản lý sản phẩm";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
+<style>
+    table.table {
+        border-collapse: collapse;
+    }
+
+        table.table thead {
+            background-color: #f8f9fa;
+        }
+
+        table.table th,
+        table.table td {
+            vertical-align: middle;
+        }
+
+    table.table-hover tbody tr:hover {
+        background-color: #f2f2f2;
+    }
+
+    .btn-sm i {
+        margin-right: 4px;
+    }
+
+    .table td .btn {
+        margin-right: 5px;
+    }
+
+    .card-title i {
+        color: #007bff;
+    }
+
+    .badge {
+        font-size: 90%;
+    }
+    .btn-danger i,
+    .btn-success i,
+    .btn-info i {
+        margin-right: 3px;
+    }
+
+    .text-nowrap {
+        white-space: nowrap;
+    }
+</style>
+
 <div class="content-header">
     <div class="container-fluid">
-        <div class="row mb-2">
+        <div class="row mb-3">
             <div class="col-sm-6">
-                <h1 class="m-0">Quản lý sản phẩm</h1>
+                <h1 class="m-0 text-primary">
+                    <i class="fas fa-box-open mr-2"></i>Quản lý sản phẩm
+                </h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="/Admin">Trang chủ</a></li>
+                    <li class="breadcrumb-item active">Sản phẩm</li>
+                </ol>
             </div>
         </div>
     </div>
 </div>
 
-<div class="row">
-    <div class="col-12">
-        <div class="card">
-            <div class="card-header">
-                @if (string.IsNullOrEmpty(Request.Params["keyword"]))
-                {
-                    <h3 class="card-title">Danh sách sản phẩm</h3>
-                }
-                else
-                {
-                    <h3 class="card-title">Danh sách sản phẩm với từ khóa "@Request.Params["keyword"]"</h3>
-                }
-                <div class="card-tools">
-                    <form action="/ProductManage/" method="get">
-                        <div class="input-group input-group-sm" style="width: 150px;">
-                            <input type="text" name="keyword" class="form-control float-right" placeholder="Tìm kiếm..." required>
-                            <div class="input-group-append">
-                                <button type="submit" class="btn btn-default">
-                                    <i class="fas fa-search"></i>
-                                </button>
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card card-primary card-outline shadow-sm">
+                    <div class="card-header">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                @if (string.IsNullOrEmpty(Request.Params["keyword"]))
+                                {
+                                    <h3 class="card-title font-weight-bold">
+                                        <i class="fas fa-list mr-1"></i>Danh sách sản phẩm
+                                    </h3>
+                                }
+                                else
+                                {
+                                    <h3 class="card-title font-weight-bold">
+                                        <i class="fas fa-search mr-1"></i>Kết quả tìm kiếm: "<span class="text-info">@Request.Params["keyword"]</span>"
+                                    </h3>
+                                }
+                            </div>
+                            <div class="card-tools">
+                                <form action="/ProductManage/" method="get" class="input-group input-group-sm" style="width: 250px;">
+                                    <input type="text" name="keyword" class="form-control" placeholder="Nhập từ khóa tìm kiếm..." value="@Request.Params["keyword"]">
+                                    <div class="input-group-append">
+                                        <button type="submit" class="btn btn-primary">
+                                            <i class="fas fa-search"></i>
+                                        </button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
-                    </form>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <a href="/ProductManage/Add" class="btn btn-success">
+                                <i class="fas fa-plus-circle mr-1"></i>Thêm sản phẩm mới
+                            </a>
+                        </div>
+
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th width="60" class="text-center">ID</th>
+                                        <th>Tên sản phẩm</th>
+                                        <th width="100" class="text-center">Hình ảnh</th>
+                                        <th>Người tạo</th>
+                                        <th width="120" class="text-center">Đơn giá</th>
+                                        <th width="120" class="text-center">Số lượng</th>
+                                        <th width="120" class="text-center">Trạng thái</th>
+                                        <th width="220" class="text-center">Thao tác</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (Model != null && Model.Count > 0)
+                                    {
+                                        foreach (var item in Model)
+                                        {
+                                            <tr>
+                                                <td class="text-center">@item.ID</td>
+                                                <td class="font-weight-bold">@item.Name</td>
+                                                <td class="text-center">
+                                                    <img src="~/Content/images/SanPham/@item.Image1" alt="@item.Name" class="img-thumbnail" style="width:60px;height:80px;object-fit:cover" />
+                                                </td>
+                                                <td>@item.User.Name</td>
+                                                <td class="text-right font-weight-bold text-danger">@item.Price.Value.ToString("#,##")₫</td>
+                                                <td class="text-right font-weight-bold text-danger">@item.Quantity.Value.ToString("#,##")</td>
+                                                <td class="text-center">
+                                                    @if (item.IsActive.Value)
+                                                    {
+                                                        <span class="badge badge-success px-3 py-2"><i class="fas fa-check-circle mr-1"></i>Kích hoạt</span>
+                                                    }
+                                                    else
+                                                    {
+                                                        <span class="badge badge-danger px-3 py-2"><i class="fas fa-ban mr-1"></i>Đã khóa</span>
+                                                    }
+                                                </td>
+                                                <td class="text-center">
+                                                    <div class="btn-group">
+                                                        <a href="/ProductManage/Details/@item.ID" class="btn btn-info btn-sm">
+                                                            <i class="fas fa-edit mr-1"></i>Chi tiết/Sửa
+                                                        </a>
+                                                        @if (item.IsActive.Value)
+                                                        {
+                                                            <a href="/ProductManage/ToggleActive/@item.ID" class="btn btn-danger btn-sm">
+                                                                <i class="fas fa-lock mr-1"></i>Khóa
+                                                            </a>
+                                                        }
+                                                        else
+                                                        {
+                                                            <a href="/ProductManage/ToggleActive/@item.ID" class="btn btn-success btn-sm">
+                                                                <i class="fas fa-unlock mr-1"></i>Mở khóa
+                                                            </a>
+                                                        }
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <tr>
+                                            <td colspan="7" class="text-center py-4">
+                                                <div class="alert alert-info mb-0">
+                                                    <i class="fas fa-info-circle mr-2"></i>Không tìm thấy sản phẩm nào
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="mt-3">
+                            <nav aria-label="Page navigation">
+                                <ul class="pagination justify-content-center">
+                                    <!-- Phân trang có thể được thêm vào đây nếu cần -->
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <a href="/ProductManage/Add" class="btn btn-outline-success col-2">Thêm mới</a>
-            <div class="card-body table-responsive p-0">
-                <table class="table table-hover text-nowrap">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Tên</th>
-                            <th>Hình ảnh</th>
-                            <th>Người tạo</th>
-                            <th>Đơn giá</th>
-                            <th>Trạng thái</th>
-                            <th>Thao tác</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @if (Model != null && Model.Count > 0)
-                        {
-                            foreach (var item in Model)
-                            {
-                                <tr>
-                                    <td>@item.ID</td>
-                                    <td>@item.Name</td>
-                                    <td><img src="~/Content/images/SanPham/@item.Image1" alt="Alternate Text" style="width:50px;height:80px" /></td>
-                                    <td>@item.User.Name</td>
-                                    <td>@item.Price.Value.ToString("#,##")₫</td>
-                                    @if (item.IsActive.Value)
-                                    {
-                                        <td><span class="badge bg-success">Kích hoạt</span></td>
-                                    }
-                                    else
-                                    {
-                                        <td><span class="badge bg-danger">Khóa</span></td>
-                                    }
-                                <td>
-                                    @if (item.IsActive.Value)
-                                    {
-                                        <button class="btn btn-outline-danger" onclick="location.href='/ProductManage/ToggleActive/@item.ID'">Khóa</button>
-                                    }
-                                    else
-                                    {
-                                        <button class="btn btn-outline-success" onclick="location.href='/ProductManage/ToggleActive/@item.ID'">Mở</button>
-                                    }
-                                    <button class="btn btn-primary" onclick="location.href='/ProductManage/Details/@item.ID'">Chi tiết/Sửa</button>
-                                    <a href="/ProductManage/Delete/@item.ID" onclick="return confirm('Bạn có chắc chắn muốn xoá sản phẩm này không?')" class="btn btn-danger btn-sm">
-                                        Xoá
-                                    </a>
-                                </td>
-                                </tr>
-                            }
-                        }
-                        else
-                        {
-                            <tr>
-                                <td>
-                                    Không tìm thấy sản phẩm...
-                                </td>
-                            </tr>
-                        }
-                    </tbody>
-                </table>
             </div>
         </div>
     </div>
-</div>
+</section>
+
+<script>
+    $(document).ready(function () {
+        $('tbody tr').hover(
+            function () { $(this).addClass('bg-light'); },
+            function () { $(this).removeClass('bg-light'); }
+        );
+
+        $('.btn').click(function () {
+            $(this).addClass('active');
+        });
+    });
+</script>

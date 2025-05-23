@@ -5,6 +5,24 @@
 
     List<CosmeticsShop.Models.ItemCart> itemCarts = Session["Cart"] as List<CosmeticsShop.Models.ItemCart>;
 }
+<style>
+    .to-buy {
+        background-color: black;
+        color: white; 
+        padding: 8px 16px;
+        border: none;
+        border-radius: 6px;
+        text-decoration: none; 
+        display: inline-block;
+        transition: background-color 0.3s ease;
+    }
+
+        .to-buy:hover {
+            background-color: orangered !important; 
+            color: white;
+        }
+
+</style>
 <script>
     $(document).ready(function () {
         $('.qty').on('keydown', function (e) {
@@ -111,8 +129,8 @@
 </div>
 <!---->
 <div class="container my-4">
-    <div class="check-out card shadow-sm p-4">
-        <h2 style="color:black" class="text-center text-primary">Giỏ hàng</h2>
+    <div style="padding:2em 0" class="check-out card shadow-sm">
+        <h2 style="color:black; margin-bottom:20px" class="text-center text-primary">Giỏ hàng</h2>
         @if (itemCarts != null && itemCarts.Count > 0)
         {
             <table class="table table-bordered table-hover mt-4">
@@ -159,7 +177,7 @@
             <hr />
             if (Session["User"] == null)
             {
-                <a href="/Home/SignIn" class=" to-buy">ĐĂNG NHẬP ĐỂ ĐẶT HÀNG</a>
+                <a href="/Home/SignIn" class=" to-buy">Đăng nhập để đặt hàng</a>
             }
             else
             {
@@ -172,7 +190,7 @@
                     </select>
                     <br />
                     <br />
-                    <button class="to-buy btn btn-warning">Đặt hàng</button>
+                    <button class="to-buy">Đặt hàng</button>
                 </form>
             }
         }
@@ -181,8 +199,9 @@
             <div style="height:190px" class="text-center">
             <h3 class="text-muted">Giỏ hàng hiện đang rỗng</h3>
             <br />
-            <a href="/Product/Index" class="btn btn-primary mt-3">Tiếp tục mua sắm</a>
+            <a href="/Product/Index" class="to-buy">Tiếp tục mua sắm</a>
+
     </div>
-        }
+    }
     </div>
 </div>

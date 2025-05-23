@@ -5,15 +5,412 @@
 
     List<CosmeticsShop.Models.Category> categories = ViewBag.ListCategory as List<CosmeticsShop.Models.Category>;
 }
+<style>
+    .single{
+        padding: 2em 0;
+    }
+    .review a:hover {
+        color: gold !important;
+        text-decoration: underline;
+    }
+
+    .product-container {
+        padding: 30px 0 150px 0;
+        background: #f8f9fa;
+        clear: both;
+    }
+
+    .product-wrapper {
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .product-images-section {
+        padding: 20px;
+        background: white;
+    }
+
+    .thumbnail-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-right: 15px;
+        width: 80px;
+    }
+
+    .thumbnail-item {
+        width: 70px;
+        height: 70px;
+        border: 2px solid #e9ecef;
+        border-radius: 4px;
+        overflow: hidden;
+        cursor: pointer;
+        transition: border-color 0.3s;
+    }
+
+        .thumbnail-item:hover,
+        .thumbnail-item.active {
+            border-color: #007bff;
+        }
+
+        .thumbnail-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    .main-image-container {
+        flex: 1;
+        position: relative;
+    }
+
+    .main-image {
+        width: 100%;
+        max-height: 500px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .product-info-section {
+        padding: 30px;
+        background: white;
+    }
+
+    .product-title {
+        font-size: 24px;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 10px;
+        line-height: 1.4;
+    }
+
+    .new-badge {
+        display: inline-block;
+        background: #ff6b35;
+        color: white;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 12px;
+        font-weight: 600;
+        margin-left: 10px;
+        vertical-align: top;
+    }
+
+    .rating-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    .stars {
+        display: flex;
+        gap: 2px;
+    }
+
+        .stars i {
+            color: #ffc107;
+            font-size: 14px;
+        }
+
+    .rating-count {
+        color: #666;
+        font-size: 14px;
+    }
+
+    .share-info {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 15px;
+        font-size: 14px;
+        color: #666;
+    }
+
+    .sku-info {
+        color: #999;
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .price-section {
+        margin-bottom: 25px;
+    }
+
+    .discount-badge {
+        background: #dc3545;
+        color: white;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 14px;
+        font-weight: 600;
+        margin-right: 10px;
+    }
+
+    .current-price {
+        font-size: 28px;
+        font-weight: 700;
+        color: #dc3545;
+        margin-right: 15px;
+    }
+
+    .original-price {
+        font-size: 18px;
+        color: #999;
+        text-decoration: line-through;
+    }
+
+    .product-options {
+        margin-bottom: 25px;
+    }
+
+    .option-group {
+        margin-bottom: 20px;
+    }
+
+    .option-label {
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 8px;
+        display: block;
+    }
+
+    .color-options {
+        display: flex;
+        gap: 10px;
+    }
+
+    .color-option {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 2px solid #e9ecef;
+        cursor: pointer;
+        transition: all 0.3s;
+        position: relative;
+    }
+
+        .color-option.beige {
+            background-color: #f5f5dc;
+        }
+
+        .color-option.brown {
+            background-color: #8b4513;
+        }
+
+        .color-option.dark-brown {
+            background-color: #654321;
+        }
+
+        .color-option:hover,
+        .color-option.selected {
+            border-color: #007bff;
+            transform: scale(1.1);
+        }
+
+    .option-text {
+        color: #666;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .quantity-section {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 25px;
+    }
+
+    .quantity-controls {
+        display: flex;
+        align-items: center;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+
+    .quantity-btn {
+        width: 40px;
+        height: 40px;
+        border: none;
+        background: #f8f9fa;
+        color: #333;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+        .quantity-btn:hover {
+            background: #e9ecef;
+        }
+
+    .quantity-input {
+        width: 60px;
+        height: 40px;
+        border: none;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .action-buttons {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 25px;
+    }
+
+    .btn-add-cart {
+        width: 100%;
+        background: #28a745;
+        color: white;
+        border: none;
+        padding: 15px 20px;
+        border-radius: 4px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.3s;
+        text-decoration: none;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+    }
+
+        .btn-add-cart:hover {
+            background: #218838;
+            color: white;
+            text-decoration: none;
+        }
+
+    .btn-buy-now {
+        flex: 1;
+        background: #ff6b35;
+        color: white;
+        border: none;
+        padding: 15px 20px;
+        border-radius: 4px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.3s;
+        text-decoration: none;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .btn-buy-now:hover {
+            background: #e55a2b;
+            color: white;
+            text-decoration: none;
+        }
+
+    .shipping-info {
+        background: #f8f9fa;
+        padding: 15px;
+        border-radius: 4px;
+        margin-bottom: 20px;
+    }
+
+        .shipping-info p {
+            margin: 0 0 5px 0;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .shipping-info .check-mark {
+            color: #28a745;
+            margin-right: 5px;
+        }
+
+    .description-section {
+        background: #f8f9fa;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 20px;
+    }
+
+        .description-section h4 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+    .description-text {
+        line-height: 1.6;
+        color: #666;
+    }
+
+    .breadcrumb-modern {
+        background: #f8f9fa;
+        padding: 15px 0;
+        border-bottom: 1px solid #e9ecef;
+    }
+
+        .breadcrumb-modern .breadcrumb {
+            background: transparent;
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+        }
+
+            .breadcrumb-modern .breadcrumb li a {
+                color: #666;
+                text-decoration: none;
+            }
+
+                .breadcrumb-modern .breadcrumb li a:hover {
+                    color: #007bff;
+                }
+
+            .breadcrumb-modern .breadcrumb li.active {
+                color: #333;
+                font-weight: 500;
+            }
+
+    .image-display {
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+    }
+</style>
 <script>
     $(document).ready(function () {
+        $('.quantity-minus').click(function () {
+            var input = $(this).siblings('.quantity-input');
+            var value = parseInt(input.val());
+            if (value > 1) {
+                input.val(value - 1);
+            }
+        });
+
+        $('.quantity-plus').click(function () {
+            var input = $(this).siblings('.quantity-input');
+            var value = parseInt(input.val());
+            input.val(value + 1);
+        });
+
+        $('.thumbnail-item').click(function () {
+            $('.thumbnail-item').removeClass('active');
+            $(this).addClass('active');
+            var imageSrc = $(this).find('img').attr('src');
+            $('.main-image').attr('src', imageSrc);
+        });
+
+        $('.thumbnail-item').first().addClass('active');
+
         $('.item_add').click(function () {
             event.preventDefault();
             var ID = $(this).data("id");
+            var quantity = $('.quantity-input').val();
             $.ajax({
                 url: '/Cart/AddItem',
                 data: {
-                    ProductID: ID
+                    ProductID: ID,
+                    Quantity: quantity
                 },
                 type: 'POST',
                 dataType: 'json',
@@ -35,18 +432,19 @@
                 },
             });
         });
+
         var fullDescription = $('.full-description').html();
         var shortDescription = truncateDescription(fullDescription, 4);
 
         if (isDescriptionLong(fullDescription)) {
             $('.short-description').html(shortDescription);
-            $('.description-container .see-more').show();
+            $('.description-container .see-more-btn').show();
         } else {
             $('.short-description').html(fullDescription);
-            $('.description-container .see-more').hide();
+            $('.description-container .see-more-btn').hide();
         }
 
-        $('.see-more').click(function (e) {
+        $('.see-more-btn').click(function (e) {
             e.preventDefault();
             if ($(this).hasClass('expanded')) {
                 $('.short-description').html(shortDescription);
@@ -58,6 +456,7 @@
                 $(this).addClass('expanded');
             }
         });
+
         function isDescriptionLong(text) {
             var lines = text.split('<br>');
             return lines.length > 4;
@@ -85,58 +484,90 @@
 </div>
 <div class="single">
     <div class="container">
-        <div class="col-md-9">
-            <div class="col-md-5 grid">
-                <div class="flexslider">
-                    <ul class="slides">
-                        <li data-thumb="@Url.Content("~/Content/images/SanPham/" + Model.Image1)">
-                            <div class="thumb-image"> <img src="@Url.Content("~/Content/images/SanPham/" + Model.Image1)" data-imagezoom="true" class="img-responsive"> </div>
-                        </li>
-                        @if (Model.Image2 != null)
-                        {
-                            <li data-thumb="@Url.Content("~/Content/images/SanPham/" + Model.Image2)">
-                                <div class="thumb-image"> <img src="@Url.Content("~/Content/images/SanPham/" + Model.Image2)" data-imagezoom="true" class="img-responsive"> </div>
-                            </li>
-                        }
-                        @if (Model.Image3 != null)
-                        {
-                            <li data-thumb="@Url.Content("~/Content/images/SanPham/" + Model.Image3)">
-                                <div class="thumb-image"> <img src="@Url.Content("~/Content/images/SanPham/" + Model.Image3)" data-imagezoom="true" class="img-responsive"> </div>
-                            </li>
-                        }
-                    </ul>
+            <div class="col-md-6">
+                <div class="product-images-section">
+                    <div class="image-display">
+                        <div class="thumbnail-list">
+                            <div class="thumbnail-item">
+                                <img src="@Url.Content("~/Content/images/SanPham/" + Model.Image1)" alt="@Model.Name">
+                            </div>
+                            @if (Model.Image2 != null)
+                            {
+                                <div class="thumbnail-item">
+                                    <img src="@Url.Content("~/Content/images/SanPham/" + Model.Image2)" alt="@Model.Name">
+                                </div>
+                            }
+                            @if (Model.Image3 != null)
+                            {
+                                <div class="thumbnail-item">
+                                    <img src="@Url.Content("~/Content/images/SanPham/" + Model.Image3)" alt="@Model.Name">
+                                </div>
+                            }
+                        </div>
+                        <div class="main-image-container">
+                            <img src="@Url.Content("~/Content/images/SanPham/" + Model.Image1)" alt="@Model.Name" class="main-image">
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-7 single-top-in">
-                <div class="single-para simpleCart_shelfItem">
-                    <h2 style="color:black">@Model.Name</h2>
-                    <div class="star-on">
-                        <ul>
-                            <li><a href="#"><i class="glyphicon glyphicon-star"> </i></a></li>
-                            <li><a href="#"><i class="glyphicon glyphicon-star"> </i></a></li>
-                            <li><a href="#"><i class="glyphicon glyphicon-star"> </i></a></li>
-                            <li><a href="#"><i class="glyphicon glyphicon-star"> </i></a></li>
-                            <li><a href="#"><i class="glyphicon glyphicon-star"> </i></a></li>
-                        </ul>
-                        <div class="review">
-                            <a href="#"> 3 reviews </a>/
-                            <a href="#">  Write a review</a>
+            <!-- Product Info -->
+            <div class="col-md-6">
+                <div class="product-info-section simpleCart_shelfItem">
+                    <h1 class="product-title">
+                        @Model.Name                   
+                    </h1>
+
+                    <div class="rating-container">
+                        <div class="stars">
+                            <i class="glyphicon glyphicon-star"></i>
+                            <i class="glyphicon glyphicon-star"></i>
+                            <i class="glyphicon glyphicon-star"></i>
+                            <i class="glyphicon glyphicon-star"></i>
+                            <i class="glyphicon glyphicon-star"></i>
                         </div>
-
-                        <div class="clearfix"> </div>
-                    </div>
-                    <p class="item_price">Đã bán: @Model.PurchasedCount</p>
-                    <hr />
-                    <label style="color:black" class="add-to item_price">@Model.Price.Value.ToString("#,##")₫</label>
-                    <hr />
-
-                    <div class="description-container">
-                        <div class="full-description" style="display: none;">@Html.Raw(Model.Description.Replace("\n", "<br>"))</div>
-                        <p class="short-description description"></p>
-                        <a href="#" class="see-more" style="color: blue; text-decoration: underline; display: none;">Xem thêm</a>
+                        <span class="rating-count">(5)</span>
                     </div>
 
-                    <a style="background-color:orangered" href="#" class="cart item_add" data-id="@Model.ID">Thêm vào giỏ hàng</a>
+                    <div class="share-info">
+                        <span>Số lượng: @Model.Quantity</i></span>
+                        <span>Đã bán: @Model.PurchasedCount</span>
+                    </div>
+
+                    <div class="price-section">
+                        <span class="discount-badge">-25%</span>
+                        <span class="current-price">@Model.Price.Value.ToString("#,##")₫</span>
+                        <span class="original-price">@((Model.Price.Value * 1.25m).ToString("#,##"))₫</span>
+                    </div>
+
+                    <div class="product-options">
+                        <div class="option-group">
+                            <label class="option-label">Mô tả sản phẩm:</label>
+                            <div class="description-container">
+                                <div class="full-description" style="display: none;">@Html.Raw(Model.Description.Replace("\n", "<br>"))</div>
+                                <div class="short-description option-text"></div>
+                                <a href="#" class="see-more-btn" style="color: #007bff; display: none;">Xem thêm</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quantity-section">
+                        <div class="quantity-controls">
+                            <button type="button" class="quantity-btn quantity-minus">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1">
+                            <button type="button" class="quantity-btn quantity-plus">+</button>
+                        </div>
+                    </div>
+
+                    <div class="action-buttons">
+                        <a href="#" class="btn-add-cart item_add" data-id="@Model.ID">
+                            THÊM VÀO GIỎ
+                        </a>
+                    </div>
+
+                    <div class="shipping-info">
+                        <p><span class="check-mark">✓</span> Miễn phí giao hàng & lắp đặt tại tất cả quận huyện thuộc TP.HCM, Hà Nội</p>
+                        <p><span class="check-mark">✓</span> Miễn phí 1 đổi 1 - Bảo hành 2 năm - Bảo trì trọn đời</p>
+                    </div>
                 </div>
             </div>
             <div class="clearfix"> </div>

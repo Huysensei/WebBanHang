@@ -2145,7 +2145,8 @@
     <Content Include="Content\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\images\adminlogin.jpg" />
-    <Content Include="Content\images\Avatar\avatarHuy.jpg" />
+    <Content Include="Content\images\Avatar\admin.jpg" />
+    <Content Include="Content\images\Avatar\client.jpg" />
     <Content Include="Content\images\Banner Slide\banner1.jpg" />
     <Content Include="Content\images\Banner Slide\banner2.jpg" />
     <Content Include="Content\images\Banner Slide\banner3.jpg" />

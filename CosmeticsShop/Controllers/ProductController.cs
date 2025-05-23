@@ -12,32 +12,10 @@ namespace CosmeticsShop.Controllers
         ShoppingEntities db = new ShoppingEntities();
         public ActionResult Index(int? page, int? pageSize, int CategoryID = 0, string keyword = "")
         {
+            // Gán danh sách danh mục cho ViewBag
             ViewBag.ListCategory = db.Categories.Where(x => x.IsActive == true).ToList();
-            if (keyword != "")
-            {
-                ViewBag.NamePage = "Tìm kiếm sản phẩm";
-                ViewBag.ListProduct = db.Products.Where(x => x.IsActive == true && x.Name.Contains(keyword)).ToList();
-                return View();
-            }
-            if (CategoryID != 0)
-            {
-                ViewBag.NamePage = "Danh mục " + db.Categories.Find(CategoryID).Name;
-                ViewBag.ListProduct = db.Products.Where(x => x.IsActive == true && x.CategoryID == CategoryID).ToList();
-            }
-            else
-            {
-                ViewBag.NamePage = "";
-                ViewBag.ListProduct = db.Products.Where(x => x.IsActive == true).ToList();
-            }
-            // phan trang
-            if (page == null)
-            {
-                page = 1;
-            }
-            if (pageSize == null)
-            {
-                pageSize = 9;
-            }
+
+            // Gán tên trang và query sản phẩm ban đầu
             IQueryable<Product> productQuery = db.Products.Where(x => x.IsActive == true);
 
             if (!string.IsNullOrEmpty(keyword))
@@ -48,22 +26,27 @@ namespace CosmeticsShop.Controllers
             else if (CategoryID != 0)
             {
                 var category = db.Categories.Find(CategoryID);
-                ViewBag.NamePage = (category != null ? category.Name : "");
-                productQuery = productQuery.Where(x => x.CategoryID == CategoryID);
+                if (category != null)
+                {
+                    ViewBag.NamePage = "Danh mục " + category.Name;
+                    productQuery = productQuery.Where(x => x.CategoryID == CategoryID);
+                }
+                else
+                {
+                    ViewBag.NamePage = "Danh mục không tồn tại";
+                }
             }
             else
             {
                 ViewBag.NamePage = "Tất cả sản phẩm";
             }
 
-            ViewBag.ListCategory = db.Categories.Where(x => x.IsActive == true).ToList();
-
+            // Phân trang
             if (page == null) page = 1;
             if (pageSize == null) pageSize = 9;
 
             var pagedList = productQuery.OrderBy(x => x.ID).ToPagedList((int)page, (int)pageSize);
             return View(pagedList);
-
         }
         public ActionResult Details(int ID)
         {

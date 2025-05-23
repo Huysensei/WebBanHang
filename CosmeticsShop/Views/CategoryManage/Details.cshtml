@@ -5,13 +5,17 @@
 }
 <div class="content-header">
     <div class="container-fluid">
-        <div class="row mb-2">
+        <div class="row mb-3">
             <div class="col-sm-6">
-                <h1 class="m-0">Quản lý danh mục</h1>
+                <h1 class="m-0 text-primary">
+                    <i class="fas fa-edit mr-2"></i>Chi tiết danh mục
+                </h1>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="#">Xem/Sửa danh mục</a></li>
+                    <li class="breadcrumb-item"><a href="/Admin">Trang chủ</a></li>
+                    <li class="breadcrumb-item"><a href="/CategoryManage">Danh mục</a></li>
+                    <li class="breadcrumb-item active">Chi tiết</li>
                 </ol>
             </div>
         </div>
@@ -22,23 +26,73 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <div class="card card-primary">
+                <div class="card card-primary card-outline shadow-sm">
                     <div class="card-header">
-                        <h3 class="card-title">@Model.Name</h3>
+                        <h3 class="card-title font-weight-bold">
+                            <i class="fas fa-tag mr-1"></i>Chỉnh sửa danh mục: <span class="text-info">@Model.Name</span>
+                        </h3>
                     </div>
-                    @using (Html.BeginForm("Edit", "CategoryManage", FormMethod.Post))
+
+                    @using (Html.BeginForm("Edit", "CategoryManage", FormMethod.Post, new { @class = "needs-validation", novalidate = "novalidate" }))
                     {
                         <input type="text" name="ID" value="@Model.ID" hidden />
                         <div class="card-body">
-                            <span class="badge bg-success">@ViewBag.Message</span>
+                            @if (!string.IsNullOrEmpty(ViewBag.Message))
+                            {
+                                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                    <i class="fas fa-check-circle mr-2"></i>@ViewBag.Message
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            }
+
                             <div class="form-group">
-                                <label>Tên</label>
-                                <input type="text" class="form-control" value="@Model.Name" required name="Name">
+                                <label for="categoryName">
+                                    <i class="fas fa-tag mr-1"></i>Tên danh mục <span class="text-danger">*</span>
+                                </label>
+                                <input type="text" class="form-control" id="categoryName" value="@Model.Name" required name="Name" placeholder="Nhập tên danh mục...">
+                                <div class="invalid-feedback">
+                                    Vui lòng nhập tên danh mục
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="categoryStatus">
+                                    <i class="fas fa-check-circle mr-1"></i>Trạng thái
+                                </label>
+                                <div class="mt-2">
+                                    @if (Model.IsActive.Value)
+                                    {
+                                        <span class="badge badge-success px-3 py-2">
+                                            <i class="fas fa-check-circle mr-1"></i>Đang kích hoạt
+                                        </span>
+                                        <a href="/CategoryManage/ToggleActive/@Model.ID" class="btn btn-outline-danger btn-sm ml-2">
+                                            <i class="fas fa-lock mr-1"></i>Khóa danh mục này
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge badge-danger px-3 py-2">
+                                            <i class="fas fa-ban mr-1"></i>Đã khóa
+                                        </span>
+                                        <a href="/CategoryManage/ToggleActive/@Model.ID" class="btn btn-outline-success btn-sm ml-2">
+                                            <i class="fas fa-unlock mr-1"></i>Kích hoạt danh mục này
+                                        </a>
+                                    }
+                                </div>
                             </div>
                         </div>
-                        <div class="card-footer">
-                            <a href="/CategoryManage/" class="btn btn-default">Trở lại</a>
-                            <button type="submit" class="btn btn-primary">Lưu</button>
+
+                        <div class="card-footer bg-light">
+                            <div class="d-flex justify-content-between">
+                                <a href="/CategoryManage/" class="btn btn-secondary">
+                                    <i class="fas fa-arrow-left mr-1"></i>Quay lại danh sách
+                                </a>
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-save mr-1"></i>Lưu thay đổi
+                                </button>
+                            </div>
                         </div>
                     }
                 </div>
