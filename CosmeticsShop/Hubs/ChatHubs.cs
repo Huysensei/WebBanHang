@@ -12,7 +12,7 @@ using TableDependency.SqlClient.Base.EventArgs;
 
 namespace CosmeticsShop.Hubs
 {
-    public class ChatHubs : Hub
+    public class ChatHubs : Hub 
     {
         public ChatHubs()
         {

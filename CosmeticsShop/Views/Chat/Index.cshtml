@@ -114,48 +114,7 @@
                         </div>
                     </div>
 
-                    <div class="card-body">
-                        <div class="mb-3">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <div class="info-box bg-info">
-                                        <span class="info-box-icon"><i class="fas fa-envelope"></i></span>
-                                        <div class="info-box-content">
-                                            <span class="info-box-text">Tổng tin nhắn</span>
-                                            <span class="info-box-number">@Model.Count()</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="info-box bg-success">
-                                        <span class="info-box-icon"><i class="fas fa-users"></i></span>
-                                        <div class="info-box-content">
-                                            <span class="info-box-text">Khách hàng</span>
-                                            <span class="info-box-number">@Model.Select(m => m.FromUserID).Distinct().Count()</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="info-box bg-warning">
-                                        <span class="info-box-icon"><i class="fas fa-clock"></i></span>
-                                        <div class="info-box-content">
-                                            <span class="info-box-text">Hôm nay</span>
-                                            <span class="info-box-number">@Model.Where(m => m.CreatedDate.HasValue && m.CreatedDate.Value.Date == DateTime.Today).Count()</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="info-box bg-danger">
-                                        <span class="info-box-icon"><i class="fas fa-exclamation-triangle"></i></span>
-                                        <div class="info-box-content">
-                                            <span class="info-box-text">Chưa trả lời</span>
-                                            <span class="info-box-number">@Model.Count()</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+                    <div class="card-body">                 
                         <div class="table-responsive">
                             <table class="table table-bordered table-hover" id="chatTable">
                                 <thead class="thead-light">
@@ -165,7 +124,7 @@
                                         <th>Email</th>
                                         <th>Tin nhắn</th>
                                         <th width="150" class="text-center">Thời gian</th>
-                                        <th width="120" class="text-center">Thao tác</th>
+                                        <th width="180" class="text-center">Thao tác</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -190,39 +149,39 @@
                                                         var timeDiff = DateTime.Now - item.CreatedDate.Value;
                                                         if (timeDiff.TotalMinutes < 1)
                                                         {
-                                                            <span class="badge time-badge time-recent px-2 py-1">
-                                                                <i class="fas fa-clock mr-1"></i>Vừa xong
+                                                            <span class="badge bg-white text-dark border px-2 py-1">
+                                                                <i class="fas fa-clock me-1"></i>Vừa xong
                                                             </span>
                                                         }
                                                         else if (timeDiff.TotalHours < 1)
                                                         {
-                                                            <span class="badge time-badge time-recent px-2 py-1">
-                                                                <i class="fas fa-clock mr-1"></i>@(timeDiff.Minutes) phút trước
+                                                            <span class="badge bg-white text-dark border px-2 py-1">
+                                                                <i class="fas fa-clock me-1"></i>@(timeDiff.Minutes) phút trước
                                                             </span>
                                                         }
                                                         else if (timeDiff.TotalDays < 1)
                                                         {
-                                                            <span class="badge time-badge badge-warning px-2 py-1">
-                                                                <i class="fas fa-clock mr-1"></i>@(timeDiff.Hours) giờ trước
+                                                            <span class="badge bg-white text-dark border px-2 py-1">
+                                                                <i class="fas fa-clock me-1"></i>@(timeDiff.Hours) giờ trước
                                                             </span>
                                                         }
                                                         else if (timeDiff.TotalDays < 7)
                                                         {
-                                                            <span class="badge time-badge time-old px-2 py-1">
-                                                                <i class="fas fa-calendar mr-1"></i>@(timeDiff.Days) ngày trước
+                                                            <span class="badge bg-white text-dark border px-2 py-1">
+                                                                <i class="fas fa-calendar me-1"></i>@(timeDiff.Days) ngày trước
                                                             </span>
                                                         }
                                                         else
                                                         {
-                                                            <span class="badge time-badge time-old px-2 py-1">
-                                                                <i class="fas fa-calendar mr-1"></i>@item.CreatedDate.Value.ToString("dd/MM/yyyy")
+                                                            <span class="badge bg-white text-dark border px-2 py-1">
+                                                                <i class="fas fa-calendar me-1"></i>@item.CreatedDate.Value.ToString("dd/MM/yyyy")
                                                             </span>
                                                         }
                                                     }
                                                     else
                                                     {
-                                                        <span class="badge badge-secondary px-2 py-1">
-                                                            <i class="fas fa-question mr-1"></i>Không xác định
+                                                        <span class="badge bg-white text-dark border px-2 py-1">
+                                                            <i class="fas fa-question me-1"></i>Không xác định
                                                         </span>
                                                     }
                                                 </td>

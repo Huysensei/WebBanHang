@@ -240,7 +240,6 @@ namespace CosmeticsShop.Controllers
             else
             {
                 Session.Remove("Cart");
-                //update paid
                 Models.Order order = db.Orders.Find(Convert.ToInt32(Session["OrderId"]));
                 order.IsPaid = true;
                 db.SaveChanges();

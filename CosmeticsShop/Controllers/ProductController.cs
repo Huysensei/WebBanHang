@@ -12,10 +12,8 @@ namespace CosmeticsShop.Controllers
         ShoppingEntities db = new ShoppingEntities();
         public ActionResult Index(int? page, int? pageSize, int CategoryID = 0, string keyword = "")
         {
-            // Gán danh sách danh mục cho ViewBag
             ViewBag.ListCategory = db.Categories.Where(x => x.IsActive == true).ToList();
 
-            // Gán tên trang và query sản phẩm ban đầu
             IQueryable<Product> productQuery = db.Products.Where(x => x.IsActive == true);
 
             if (!string.IsNullOrEmpty(keyword))
